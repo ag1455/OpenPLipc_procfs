@@ -1,0 +1,13 @@
+config.misc.defaultchosen=false
+config.misc.firstrun=true
+config.misc.initialchannelselection=true
+config.misc.languageselected=true
+config.misc.videowizardenabled=false
+config.pc.default_fullscreen=true
+config.pc.initial_window_height=1080
+config.pc.initial_window_width=1920
+config.usage.menu_show_numbers=true
+config.usage.servicelist_column=300
+config.usage.setup_level=expert
+config.usage.swap_snr_on_osd=true
+config.av.aspect=16_9

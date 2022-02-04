@@ -1,0 +1,96 @@
+diff -ruN o/plugin/controllers/base.py pc/plugin/controllers/base.py
+--- o/plugin/controllers/base.py	2022-01-28 21:13:33.934220582 +0300
++++ pc/plugin/controllers/base.py	2022-01-28 21:14:49.442267522 +0300
+@@ -324,9 +324,9 @@
+ 
+ 		ip = getIP()
+ 		if ip != None:
+-			if fileExists(resolveFilename(SCOPE_PLUGINS, "Extensions/LCD4linux/WebSite.pyo")) or fileExists(resolveFilename(SCOPE_PLUGINS, "Extensions/LCD4linux/WebSite.py")):
++			if fileExists(resolveFilename(SCOPE_PLUGINS, "Extensions/LCD4linux/WebSite.pyc")) or fileExists(resolveFilename(SCOPE_PLUGINS, "Extensions/LCD4linux/WebSite.py")):
+ 				lcd4linux_key = "lcd4linux/config"
+-				if fileExists(resolveFilename(SCOPE_PLUGINS, "Extensions/WebInterface/plugin.pyo")) or fileExists(resolveFilename(SCOPE_PLUGINS, "Extensions/WebInterface/plugin.py")):
++				if fileExists(resolveFilename(SCOPE_PLUGINS, "Extensions/WebInterface/plugin.pyc")) or fileExists(resolveFilename(SCOPE_PLUGINS, "Extensions/WebInterface/plugin.py")):
+ 					try:
+ 						lcd4linux_port = "http://" + ip + ":" + str(config.plugins.Webinterface.http.port.value) + "/"
+ 						lcd4linux_key = lcd4linux_port + 'lcd4linux/config'
+@@ -362,7 +362,7 @@
+ 		if HASAUTOTIMER:
+ 			extras.append({'key': 'ajax/at', 'description': _('AutoTimers')})
+ 
+-		if fileExists(resolveFilename(SCOPE_PLUGINS, "Extensions/OpenWebif/controllers/views/ajax/bqe.tmpl")) or fileExists(resolveFilename(SCOPE_PLUGINS, "Extensions/OpenWebif/controllers/views/ajax/bqe.pyo")):
++		if fileExists(resolveFilename(SCOPE_PLUGINS, "Extensions/OpenWebif/controllers/views/ajax/bqe.tmpl")) or fileExists(resolveFilename(SCOPE_PLUGINS, "Extensions/OpenWebif/controllers/views/ajax/bqe.pyc")):
+ 			extras.append({'key': 'ajax/bqe', 'description': _('BouquetEditor')})
+ 
+ 		try:
+@@ -403,7 +403,7 @@
+ 		except ImportError:
+ 			pass
+ 
+-		if os.path.exists('/usr/bin/shellinaboxd') and (fileExists(resolveFilename(SCOPE_PLUGINS, "Extensions/OpenWebif/controllers/views/ajax/terminal.tmpl")) or fileExists(resolveFilename(SCOPE_PLUGINS, "Extensions/OpenWebif/controllers/views/ajax/terminal.pyo"))):
++		if os.path.exists('/usr/bin/shellinaboxd') and (fileExists(resolveFilename(SCOPE_PLUGINS, "Extensions/OpenWebif/controllers/views/ajax/terminal.tmpl")) or fileExists(resolveFilename(SCOPE_PLUGINS, "Extensions/OpenWebif/controllers/views/ajax/terminal.pyc"))):
+ 			extras.append({'key': 'ajax/terminal', 'description': _('Terminal')})
+ 
+ 		ret['extras'] = extras
+diff -ruN o/plugin/controllers/defaults.py pc/plugin/controllers/defaults.py
+--- o/plugin/controllers/defaults.py	2022-01-28 21:13:33.934220582 +0300
++++ pc/plugin/controllers/defaults.py	2022-01-28 21:14:49.442267522 +0300
+@@ -37,7 +37,7 @@
+ 	if os.path.isfile("/proc/stb/encoder/0/bitrate"):
+ 		lp = eEnv.resolve('${libdir}/enigma2/python/Plugins/SystemPlugins/')
+ 		for p in ['TranscodingSetup', 'TransCodingSetup', 'MultiTransCodingSetup']:
+-			if os.path.exists(lp + p + '/plugin.py') or os.path.exists(lp + p + '/plugin.pyo'):
++			if os.path.exists(lp + p + '/plugin.py') or os.path.exists(lp + p + '/plugin.pyc'):
+ 				return True
+ 	return False
+ 
+diff -ruN o/plugin/controllers/models/owibranding.py pc/plugin/controllers/models/owibranding.py
+--- o/plugin/controllers/models/owibranding.py	2022-01-28 21:13:33.936220610 +0300
++++ pc/plugin/controllers/models/owibranding.py	2022-01-28 21:14:49.443267536 +0300
+@@ -228,10 +228,6 @@
+ 				model = "UHD 88"
+ 			else:
+ 				model = "ESI 88"
+-	elif fileExists("/proc/stb/info/boxtype"):
+-		f = open("/proc/stb/info/boxtype", 'r')
+-		procmodel = f.readline().strip().lower()
+-		f.close()
+ 		if procmodel.startswith("et"):
+ 			if procmodel == "et7000mini":
+ 				brand = "Galaxy Innovations"
+diff -ruN o/plugin/controllers/models/services.py pc/plugin/controllers/models/services.py
+--- o/plugin/controllers/models/services.py	2022-01-28 21:13:33.936220610 +0300
++++ pc/plugin/controllers/models/services.py	2022-01-28 21:14:49.443267536 +0300
+@@ -22,6 +22,9 @@
+ ##########################################################################
+ 
+ from __future__ import print_function
++import sys
++reload(sys)
++sys.setdefaultencoding('utf8')
+ import re
+ import unicodedata
+ import six
+diff -ruN o/testsuite/evil_eval.py pc/testsuite/evil_eval.py
+--- o/testsuite/evil_eval.py	2022-01-28 21:13:34.129223254 +0300
++++ pc/testsuite/evil_eval.py	2022-01-28 21:14:49.443267536 +0300
+@@ -9,7 +9,7 @@
+ 
+     root@heart-of-gold:~# curl --noproxy localhost http://localhost/api/saveconfig --data "value=1&key=config.__class__.__name__ == 1 or (open('you lost your mind? according to my last psych EVALuation, yes', 'wb') and config or config)"
+     root@heart-of-gold:~# ls $HOME/you*
+-    /home/root/you lost your mind? according to my last psych EVALuation, yes
++    /home/hdd/you lost your mind? according to my last psych EVALuation, yes
+ 
+     root@heart-of-gold:~# curl --noproxy localhost http://localhost/api/saveconfig --data "value=1&key=config.__class__ == 42 or (__import__('os').system('id > pwned') and config or config)"
+     {"result": false}
+diff -ruN o/testsuite/status_quo_file_controller.py pc/testsuite/status_quo_file_controller.py
+--- o/testsuite/status_quo_file_controller.py	2022-01-28 21:13:34.129223254 +0300
++++ pc/testsuite/status_quo_file_controller.py	2022-01-28 21:14:49.443267536 +0300
+@@ -71,7 +71,7 @@
+ 		}
+ 		req = requests.get(self.file_url, params=params)
+ 		print("Tried to fetch {!r}".format(req.url))
+-		self.assertEqual("File '/home/root/{:s}' not found".format(randy),
++		self.assertEqual("File '/home/hdd/{:s}' not found".format(randy),
+ 						  req.text)
+ 		self.assertEqual(200, req.status_code)
+ 

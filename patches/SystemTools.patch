@@ -1,0 +1,625 @@
+diff -ruN o/plugin/locale/ru/LC_MESSAGES/SystemTools.po pc/plugin/locale/ru/LC_MESSAGES/SystemTools.po
+--- o/plugin/locale/ru/LC_MESSAGES/SystemTools.po	1970-01-01 03:00:00.000000000 +0300
++++ pc/plugin/locale/ru/LC_MESSAGES/SystemTools.po	2021-04-15 19:03:06.138460427 +0300
+@@ -0,0 +1,311 @@
++# SOME DESCRIPTIVE TITLE.
++# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
++# This file is distributed under the same license as the PACKAGE package.
++# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
++#
++msgid ""
++msgstr ""
++"Project-Id-Version: SystemTools\n"
++"Report-Msgid-Bugs-To: \n"
++"POT-Creation-Date: 2019-07-10 10:31+0300\n"
++"PO-Revision-Date: 2019-07-13 14:42+0300\n"
++"Last-Translator: Александр Кольцов <a.g.prosat@gmail.com>\n"
++"Language-Team: Enthusiasts\n"
++"Language: ru\n"
++"MIME-Version: 1.0\n"
++"Content-Type: text/plain; charset=UTF-8\n"
++"Content-Transfer-Encoding: 8bit\n"
++"X-Generator: Poedit 2.2.1\n"
++
++#: SystemToolsText.py:26 plugin.py:155
++msgid "Exit"
++msgstr "Выход"
++
++#: SystemToolsText.py:27 plugin.py:137 plugin.py:259 plugin.py:381
++msgid "OK"
++msgstr "OK"
++
++#: SystemToolsText.py:66 SystemToolsText.py:67
++msgid "Close"
++msgstr "Закрыть"
++
++#: SystemToolsConsole.py:56 SystemToolsConsole.py:123
++msgid "Execution finished!!"
++msgstr "Выполнение завершено!"
++
++#: plugin.py:79
++msgid "SystemToolsConfig to activate some changes restart enigma"
++msgstr "Инструменты системной конфигурации"
++
++#: plugin.py:82 plugin.py:136 plugin.py:258 plugin.py:380
++msgid "Cancel"
++msgstr "Отмена"
++
++#: plugin.py:83
++msgid "Save"
++msgstr "Сохранить"
++
++#: plugin.py:93
++msgid "Show SystemTools in Main menu"
++msgstr "Показ SystemTools в главном меню"
++
++#: plugin.py:94
++msgid "Show SystemTools in System menu"
++msgstr "Показ SystemTools в системном меню"
++
++#: plugin.py:95
++msgid "Show SystemTools in Setup menu"
++msgstr "Показ SystemTools в меню настроек"
++
++#: plugin.py:96
++msgid "Show SystemTools in Plugin menu restart enigma to activate"
++msgstr "Показ SystemTools в меню плагинов (требуется рестарт)"
++
++#: plugin.py:133
++msgid "System Tools Main Menu"
++msgstr "Главное меню системных инструментов"
++
++#: plugin.py:138
++msgid "Configure"
++msgstr "Настройки"
++
++#: plugin.py:149
++msgid "Restart Aktif Softcam"
++msgstr "Перезапуск активного эмулятора"
++
++msgid "Restart active Softcam"
++msgstr "Перезапуск активного эмулятора"
++
++#: plugin.py:150
++msgid "Ecm Info "
++msgstr "Информация ECM "
++
++#: plugin.py:151
++msgid "Clean Memory"
++msgstr "Очистка памяти"
++
++#: plugin.py:152
++msgid "Delete Epg data CAUTION RESTARTS ENIGMA2 "
++msgstr "Удаление данных EPG (ТРЕБУЕТСЯ ПЕРЕЗАПУСК ENIGMA2)"
++
++msgid "Restart enigma2"
++msgstr "Рестарт enigma2"
++
++#: plugin.py:153
++msgid "Menu Swap File Tools"
++msgstr "Меню инструментов файла подкачки"
++
++#: plugin.py:154
++msgid "Menu System Information Tools "
++msgstr "Меню информации системных инструментов "
++
++#: plugin.py:173
++msgid "Please wait, restarting softcam"
++msgstr "Перезапуск softcam. Пожалуйста, подождите."
++
++#: plugin.py:200 plugin.py:203 plugin.py:350 plugin.py:353 plugin.py:579
++#: plugin.py:582
++#, python-format
++msgid "start shell com: %s"
++msgstr "Скрипт: %s"
++
++#: plugin.py:228
++msgid ""
++"Your Are watching FTA Channel or\n"
++" ecm.info file is missing."
++msgstr ""
++"Вы смотрите FTA канал или\n"
++"ecm.info отсутствует."
++
++#: plugin.py:256
++msgid "System Tools Information Menu"
++msgstr "Меню информации системных инструментов"
++
++#: plugin.py:269
++msgid "  Memory info simple"
++msgstr "  Краткая информация о памяти"
++
++#: plugin.py:270
++msgid "  Memory info list"
++msgstr "  Список информации о памяти"
++
++#: plugin.py:271
++msgid "  Smartreader Info"
++msgstr "  Информация Smartreader"
++
++#: plugin.py:272
++msgid "  Mounted devices"
++msgstr "  Смонтированные устройства"
++
++#: plugin.py:273
++msgid "  Storage devices Info"
++msgstr "  Информация о носителях информации"
++
++#: plugin.py:274
++msgid "  Cpu Information"
++msgstr "  Информация о процессоре"
++
++#: plugin.py:275
++msgid "  Linux and gcc version"
++msgstr "  Версия Linux и gcc"
++
++#: plugin.py:276 plugin.py:399
++msgid "  Exit"
++msgstr " Выход"
++
++#: plugin.py:295
++msgid "Mounted Devices"
++msgstr "Смонтированные устройства"
++
++#: plugin.py:300
++msgid "Sorage Devices Information"
++msgstr "Устройства хранения информации"
++
++#: plugin.py:305
++msgid "Cpu Information"
++msgstr "Информация о процессоре"
++
++#: plugin.py:310
++msgid "Linux and Gcc Version"
++msgstr "Версия Linux и gcc"
++
++#: plugin.py:378
++msgid "Swap File Tools Menu"
++msgstr "Меню инструментов файла подкачки"
++
++#: plugin.py:391
++msgid "  Show Aktif Swap"
++msgstr " Показать активный файл подкачки"
++
++#: plugin.py:392
++msgid "  De-activate Swap"
++msgstr "  Деактивировать файл подкачки"
++
++#: plugin.py:393
++msgid "  Create swap file on hdd"
++msgstr "  Создать файл подкачки на HDD"
++
++#: plugin.py:394
++msgid "  Create swap file on cf "
++msgstr "  Создать файл подкачки на CF "
++
++#: plugin.py:395
++msgid "  Create swap file on usb"
++msgstr "  Создать файл подкачки на USB"
++
++#: plugin.py:396
++msgid "  Aktivate swap on HDD"
++msgstr "  Активировать файл подкачки на HDD"
++
++#: plugin.py:397
++msgid "  Aktivate swap on CF"
++msgstr "  Активировать файл подкачки на CF"
++
++#: plugin.py:398
++msgid "  Aktivate swap on USB"
++msgstr "  Активировать файл подкачки на USB"
++
++#: plugin.py:409
++msgid "Aktif Swap"
++msgstr "Активный файл подкачки"
++
++#: plugin.py:414
++msgid "Please wait : Creating swap File on hdd"
++msgstr "Создание файла подкачки на жестком диске. Пожалуйста, подождите."
++
++#: plugin.py:421
++msgid "Please wait : Creating swap File on cf"
++msgstr "Создание файла подкачки на cf. Пожалуйста, подождите."
++
++#: plugin.py:428
++msgid "Please wait : Creating swap File on usb"
++msgstr "Создание файла подкачки на USB. Пожалуйста, подождите."
++
++#: plugin.py:444
++msgid "Swap is De-activated"
++msgstr "Файл подкачки деактивирован."
++
++#: plugin.py:484
++msgid "Swapfile is Not Aktivated !"
++msgstr "Файл подкачки не активирован!"
++
++#: plugin.py:486
++msgid "SwapFile is Not Aktif ! or /proc/swaps is missing"
++msgstr "Файл подкачки не активен или /proc/swaps отсутствует."
++
++#: plugin.py:492
++msgid ""
++"Swap File was already created ! You can activate the SWAP on CF if not done "
++"yet"
++msgstr ""
++"Файл подкачки уже создан! Вы можете активировать SWAP на CF, если это еще не "
++"сделано."
++
++#: plugin.py:500
++msgid "Done! You can now activate the SWAP on CF"
++msgstr "Готово! Теперь Вы можете активировать файл подкачки на CF."
++
++#: plugin.py:504
++msgid "No compact flash mounted on /media/cf"
++msgstr "Компактная флешка не смонтирована на /media/cf."
++
++#: plugin.py:512
++msgid ""
++"Swap File was already created ! You can activate the SWAP on HDD if not done "
++"yet"
++msgstr ""
++"Файл подкачки уже создан! Вы можете активировать SWAP на HDD, если это еще "
++"не сделано."
++
++#: plugin.py:520
++msgid "Done! You can now activate the SWAP on HDD"
++msgstr "Готово! Теперь Вы можете активировать файл подкачки на HDD."
++
++#: plugin.py:524
++msgid "No hard drive mounted on /media/hdd"
++msgstr "Нет жесткого диска, смонтированного на /media/hdd."
++
++#: plugin.py:532
++msgid ""
++"Swap File was already created ! You can activate the SWAP on USB if not done "
++"yet"
++msgstr ""
++"Файл подкачки уже создан! Вы можете активировать SWAP на USB, если это еще "
++"не сделано."
++
++#: plugin.py:540
++msgid "Done! You can now activate the SWAP on USB"
++msgstr "Готово! Теперь Вы можете активировать файл подкачки на USB."
++
++#: plugin.py:544
++msgid "No usb stick mounted on /media/usb"
++msgstr "USB флешка не смонтирована /media/usb."
++
++#: plugin.py:552
++msgid "Swap is activated on HDD"
++msgstr "Файл подкачки активирован на HDD."
++
++#: plugin.py:555
++msgid "There is no swap file found on HDD. Create it first"
++msgstr "На жестком диске не найден файл подкачки. Сначала создайте его."
++
++#: plugin.py:562
++msgid "Swap is activated on CF"
++msgstr "Файл подкачки активирован на CF."
++
++#: plugin.py:565
++msgid "There is no swap file found on CF. Create it first"
++msgstr "На CF не найден файл подкачки. Сначала создайте его."
++
++#: plugin.py:572
++msgid "Swap is activated on USB"
++msgstr "Файл подкачки активирован на USB."
++
++#: plugin.py:575
++msgid "There is no swap file found on USB. Create it first"
++msgstr "На USB не найден файл подкачки. Сначала создайте его."
++
++#: plugin.py:602 plugin.py:605 plugin.py:608 plugin.py:615 plugin.py:616
++#: plugin.py:619 plugin.py:620
++msgid "System Tools"
++msgstr "Системные инструменты"
+diff -ruN o/plugin/plugin.py pc/plugin/plugin.py
+--- o/plugin/plugin.py	2021-04-15 18:22:58.104212809 +0300
++++ pc/plugin/plugin.py	2021-04-15 18:23:32.549983934 +0300
+@@ -25,6 +25,26 @@
+ import os
+ from enigma import eTimer, RT_HALIGN_LEFT, RT_HALIGN_RIGHT, gFont, gRGB, eListboxPythonMultiContent
+ 
++from Components.Language import language
++from Tools.Directories import resolveFilename, SCOPE_PLUGINS, SCOPE_LANGUAGE
++from os import environ as os_environ
++import gettext
++
++def localeInit():
++    lang = language.getLanguage()[:2] # getLanguage returns e.g. "fi_FI" for "language_country"
++    os_environ["LANGUAGE"] = lang # Enigma doesn't set this (or LC_ALL, LC_MESSAGES, LANG). gettext needs it!
++    gettext.bindtextdomain("SystemTools", resolveFilename(SCOPE_PLUGINS, "Extensions/SystemTools/locale"))
++
++def _(txt):
++    t = gettext.dgettext("SystemTools", txt)
++    if t == txt:
++        print "[SystemTools] fallback to default translation for", txt
++        t = gettext.gettext(txt)
++    return t
++
++localeInit()
++language.addCallback(localeInit)
++
+ ##############################################################################
+ config.SystemTools = ConfigSubsection()
+ config.SystemTools.mainmenu = ConfigYesNo(default=False)
+@@ -56,7 +76,7 @@
+ 		self.list = []
+ 
+ 		ConfigListScreen.__init__(self, self.list)
+-		self.name = "SystemToolsConfig to activate some changes restart enigma"
++		self.name = _("SystemToolsConfig to activate some changes restart enigma")
+ 		self.onShown.append(self.setWindowTitle)
+ 
+ 		self["key_red"] = Label(_("Cancel"))
+@@ -110,7 +130,7 @@
+ 		#self.ListEntry = []
+ 		self.list = []
+ 
+-		self.name = "System Tools Main Menu"
++		self.name = _("System Tools Main Menu")
+ 		self.onShown.append(self.setWindowTitle)
+ 
+ 		self["key_red"] = Label(_("Cancel"))
+@@ -126,13 +146,13 @@
+ 			"yellow": self.KeyConfig,
+ 		}, -1)
+ 
+-		self.list.append(("Restart active Softcam", "com_one"))
+-		self.list.append(("Restart enigma2", "com_eight"))
+-		self.list.append(("Ecm Info ", "com_two"))
+-		self.list.append(("Clean Memory", "com_seven"))
+-		self.list.append(("Delete Epg data CAUTION RESTARTS ENIGMA2 ", "com_six"))
+-		self.list.append(("Menu Swap File Tools", "com_four"))
+-		self.list.append(("Menu System Information Tools ", "com_five"))
++		self.list.append((_("Restart active Softcam"), "com_one"))
++		self.list.append((_("Restart enigma2"), "com_eight"))
++		self.list.append((_("Ecm Info "), "com_two"))
++		self.list.append((_("Clean Memory"), "com_seven"))
++		self.list.append((_("Delete Epg data CAUTION RESTARTS ENIGMA2 "), "com_six"))
++		self.list.append((_("Menu Swap File Tools"), "com_four"))
++		self.list.append((_("Menu System Information Tools "), "com_five"))
+ 		self.list.append((_("Exit"), "exit"))
+ 
+ 		self["entries"] = MenuList(self.list)
+@@ -187,11 +207,11 @@
+ 		self.activityTimer.stop()
+ 		del self.activityTimer
+ 		os.system('sleep 2')
+-		os.system('/etc/init.d/softcam stop')
++		os.system('/usr/local/bin/softcam stop')
+ 		self.oldref = self.session.nav.getCurrentlyPlayingServiceReference()
+ 		self.session.nav.stopService()
+ 		os.system('sleep 2')
+-		os.system('/etc/init.d/softcam start')
++		os.system('/usr/local/bin/softcam start')
+ 		os.system('sleep 3')
+ 		if self.mbox:
+ 			self.mbox.close()
+@@ -206,7 +226,7 @@
+ 			ecm.close()
+ 			return msg
+ 		else:
+-			msg = "Your Are watching FTA Channel or\n ecm.info file is missing."
++			msg = _("Your Are watching FTA Channel or\n ecm.info file is missing.")
+ 			return msg
+ 
+ 	def info(self):
+@@ -235,7 +255,7 @@
+ 		Screen.__init__(self, session)
+ 		self.list = []
+ 
+-		self.name = "System Tools Information Menu"
++		self.name = _("System Tools Information Menu")
+ 		self.onShown.append(self.setWindowTitle)
+ 		self["key_red"] = Label(_("Cancel"))
+ 		self["key_green"] = Label(_("OK"))
+@@ -248,13 +268,13 @@
+ 			"green": self.go,
+ 		}, -1)
+ 
+-		self.list.append(("  Memory info simple", "com_infone"))
+-		self.list.append(("  Memory info list", "com_infseven"))
+-		self.list.append(("  Smartreader Info", "com_inftwo"))
+-		self.list.append(("  Mounted devices", "com_inftree"))
+-		self.list.append(("  Storage devices Info", "com_inffour"))
+-		self.list.append(("  Cpu Information", "com_inffive"))
+-		self.list.append(("  Linux and gcc version", "com_infsix"))
++		self.list.append((_("  Memory info simple"), "com_infone"))
++		self.list.append((_("  Memory info list"), "com_infseven"))
++		self.list.append((_("  Smartreader Info"), "com_inftwo"))
++		self.list.append((_("  Mounted devices"), "com_inftree"))
++		self.list.append((_("  Storage devices Info"), "com_inffour"))
++		self.list.append((_("  Cpu Information"), "com_inffive"))
++		self.list.append((_("  Linux and gcc version"), "com_infsix"))
+ 		self.list.append((_("  Exit"), "exit"))
+ 
+ 		self["entries"] = MenuList(self.list)
+@@ -357,7 +377,7 @@
+ 		Screen.__init__(self, session)
+ 		self.list = []
+ 
+-		self.name = "Swap File Tools Menu"
++		self.name = _("Swap File Tools Menu")
+ 		self.onShown.append(self.setWindowTitle)
+ 		self["key_red"] = Label(_("Cancel"))
+ 		self["key_green"] = Label(_("OK"))
+@@ -370,14 +390,14 @@
+ 			"green": self.go,
+ 		}, -1)
+ 
+-		self.list.append(("  Show Aktif Swap", "com_swapone"))
+-		self.list.append(("  De-activate Swap", "com_swapten"))
+-		self.list.append(("  Create swap file on hdd", "com_swaptwo"))
+-		self.list.append(("  Create swap file on cf ", "com_swaptree"))
+-		self.list.append(("  Create swap file on usb", "com_swapfour"))
+-		self.list.append(("  Aktivate swap on HDD", "com_swapsix"))
+-		self.list.append(("  Aktivate swap on CF", "com_swapseven"))
+-		self.list.append(("  Aktivate swap on USB", "com_swapeight"))
++		self.list.append((_("  Show Aktif Swap"), "com_swapone"))
++		self.list.append((_("  De-activate Swap"), "com_swapten"))
++		self.list.append((_("  Create swap file on hdd"), "com_swaptwo"))
++		self.list.append((_("  Create swap file on cf "), "com_swaptree"))
++		self.list.append((_("  Create swap file on usb"), "com_swapfour"))
++		self.list.append((_("  Aktivate swap on HDD"), "com_swapsix"))
++		self.list.append((_("  Aktivate swap on CF"), "com_swapseven"))
++		self.list.append((_("  Aktivate swap on USB"), "com_swapeight"))
+ 		self.list.append((_("  Exit"), "exit"))
+ 
+ 		self["entries"] = MenuList(self.list)
+@@ -388,7 +408,7 @@
+ 
+ 		if returnValue is not None:
+ 			if returnValue is "com_swapone":
+-				title = "Aktif Swap"
++				title = _("Aktif Swap")
+ 				msg = self.aktswapscreen()
+ 				self.session.open(SystemToolsTextBox, msg, title)
+ 
+@@ -463,9 +483,9 @@
+ 			if swapentrylist != []:
+ 				return '\n'.join(swapentrylist)
+ 			else:
+-				return "Swapfile is Not Aktivated !"
++				return _("Swapfile is Not Aktivated !")
+ 		else:
+-			return "SwapFile is Not Aktif ! or /proc/swaps is missing"
++			return _("SwapFile is Not Aktif ! or /proc/swaps is missing")
+ 
+ 	def createswapcf(self):
+ 		self.activityTimer.stop()
+@@ -490,14 +510,14 @@
+ 	def createswaphdd(self):
+ 		self.activityTimer.stop()
+ 		del self.activityTimer
+-		if fileExists("/media/hdd/swapfile"):
++		if fileExists("/swapfile"):
+ 			msg = _("Swap File was already created ! You can activate the SWAP on HDD if not done yet")
+ 			self.mbox2 = self.session.open(MessageBox, msg, MessageBox.TYPE_INFO)
+ 			self.mbox.close()
+ 		else:
+-			if pathExists("/media/hdd"):
++			if pathExists("/"):
+ 				os.system('sleep 1')
+-				os.system('dd if=/dev/zero of=/media/hdd/swapfile bs=1048576 count=128; mkswap /media/hdd/swapfile')
++				os.system('dd if=/dev/zero of=/swapfile bs=1M count=2000; mkswap /swapfile; chmod 600 /swapfile')
+ 				os.system('sleep 1')
+ 				msg = _("Done! You can now activate the SWAP on HDD")
+ 				self.mbox2 = self.session.open(MessageBox, msg, MessageBox.TYPE_INFO)
+@@ -534,7 +554,7 @@
+ 			msg = _("Swap is activated on HDD")
+ 			self.mbox = self.session.open(MessageBox, msg, MessageBox.TYPE_INFO)
+ 		else:
+-			msg = ("There is no swap file found on HDD. Create it first")
++			msg = _("There is no swap file found on HDD. Create it first")
+ 			self.mbox = self.session.open(MessageBox, msg, MessageBox.TYPE_INFO)
+ 
+ 	def activateswapcf(self):
+@@ -544,7 +564,7 @@
+ 			msg = _("Swap is activated on CF")
+ 			self.mbox = self.session.open(MessageBox, msg, MessageBox.TYPE_INFO)
+ 		else:
+-			msg = ("There is no swap file found on CF. Create it first")
++			msg = _("There is no swap file found on CF. Create it first")
+ 			self.mbox = self.session.open(MessageBox, msg, MessageBox.TYPE_INFO)
+ 
+ 	def activateswapusb(self):
+@@ -554,7 +574,7 @@
+ 			msg = _("Swap is activated on USB")
+ 			self.mbox = self.session.open(MessageBox, msg, MessageBox.TYPE_INFO)
+ 		else:
+-			msg = ("There is no swap file found on USB. Create it first")
++			msg = _("There is no swap file found on USB. Create it first")
+ 			self.mbox = self.session.open(MessageBox, msg, MessageBox.TYPE_INFO)
+ 
+ 	def prombt(self, com):
+@@ -594,9 +614,9 @@
+ 
+ def Plugins(**kwargs):
+ 	if config.SystemTools.applicationmenu.value == True:
+-		return [PluginDescriptor(name="System Tools", description="basic toolsmenu", where=PluginDescriptor.WHERE_PLUGINMENU, fnc=main),
+-			PluginDescriptor(name="System Tools", description="basic toolsmenu", where=PluginDescriptor.WHERE_MENU, fnc=menu),
+-			PluginDescriptor(name="System Tools", description="basic toolsmenu", where=PluginDescriptor.WHERE_EXTENSIONSMENU, fnc=main)]
++		return [PluginDescriptor(name=_("System Tools"), description="basic toolsmenu", where=PluginDescriptor.WHERE_PLUGINMENU, fnc=main),
++			PluginDescriptor(name=_("System Tools"), description="basic toolsmenu", where=PluginDescriptor.WHERE_MENU, fnc=menu),
++			PluginDescriptor(name=_("System Tools"), description="basic toolsmenu", where=PluginDescriptor.WHERE_EXTENSIONSMENU, fnc=main)]
+ 
+-	return [PluginDescriptor(name="System Tools", description="basic toolsmenu", where=PluginDescriptor.WHERE_MENU, fnc=menu),
+-		PluginDescriptor(name="System Tools", description="basic toolsmenu", where=PluginDescriptor.WHERE_EXTENSIONSMENU, fnc=main)]
++	return [PluginDescriptor(name=_("System Tools"), description="basic toolsmenu", where=PluginDescriptor.WHERE_MENU, fnc=menu),
++		PluginDescriptor(name=_("System Tools"), description="basic toolsmenu", where=PluginDescriptor.WHERE_EXTENSIONSMENU, fnc=main)]
+diff -ruN o/plugin/SystemToolsConsole.py pc/plugin/SystemToolsConsole.py
+--- o/plugin/SystemToolsConsole.py	2021-04-15 18:22:58.103213309 +0300
++++ pc/plugin/SystemToolsConsole.py	2021-04-15 18:23:32.549983934 +0300
+@@ -43,7 +43,6 @@
+ 		self.setTitle(self.newtitle)
+ 
+ 	def startRun(self):
+-		self["text"].setText(_("Execution Progress:") + "\n\n")
+ 		print "Console: executing in run", self.run, " the command:", self.cmdlist[self.run]
+ 		if self.container.execute(self.cmdlist[self.run]): #start of container application failed...
+ 			self.runFinished(-1) # so we must call runFinished manual
+@@ -112,7 +111,6 @@
+ 		self.setTitle(self.newtitle)
+ 
+ 	def startRun(self):
+-		self["text"].setText(_("Execution Progress:") + "\n\n")
+ 		print "Console: executing in run", self.run, " the command:", self.cmdlist[self.run]
+ 		if self.container.execute(self.cmdlist[self.run]): #start of container application failed...
+ 			self.runFinished(-1) # so we must call runFinished manual
+diff -ruN o/setup.py pc/setup.py
+--- o/setup.py	2021-04-15 18:22:58.104212809 +0300
++++ pc/setup.py	2021-04-15 18:23:32.550983434 +0300
+@@ -1,4 +1,5 @@
+ from distutils.core import setup, Extension
++import setup_translate
+ 
+ pkg = 'Extensions.SystemTools'
+ setup(name='enigma2-plugin-extensions-systemtools',
+@@ -7,4 +8,5 @@
+        packages=[pkg],
+        package_dir={pkg: 'plugin'},
+        package_data={pkg: ['memorysimple.sh', 'maintainer.info']},
++       cmdclass = setup_translate.cmdclass, # for translation
+       )
+diff -ruN o/setup_translate.py pc/setup_translate.py
+--- o/setup_translate.py	1970-01-01 03:00:00.000000000 +0300
++++ pc/setup_translate.py	2021-04-15 18:23:32.550983434 +0300
+@@ -0,0 +1,37 @@
++# Language extension for distutils Python scripts. Based on this concept:
++# http://wiki.maemo.org/Internationalize_a_Python_application
++from distutils import cmd
++from distutils.command.build import build as _build
++import os
++
++class build_trans(cmd.Command):
++	description = 'Compile .po files into .mo files'
++	def initialize_options(self):
++		pass
++
++	def finalize_options(self):
++		pass
++
++	def run(self):
++		s = os.path.join('plugin', 'locale')
++		for lang in os.listdir(s):
++			lc = os.path.join(s, lang, 'LC_MESSAGES')
++			if os.path.isdir(lc):
++				for f in os.listdir(lc):
++					if f.endswith('.po'):
++						src = os.path.join(lc, f)
++						dest = os.path.join(lc, f[:-2] + 'mo')
++						print "Language compile %s -> %s" % (src, dest)
++						if os.system("msgfmt '%s' -o '%s'" % (src, dest)) != 0:
++							raise Exception, "Failed to compile: " + src
++
++class build(_build):
++	sub_commands = _build.sub_commands + [('build_trans', None)]
++	def run(self):
++		_build.run(self)
++
++cmdclass = {
++	'build': build,
++	'build_trans': build_trans,
++}
++

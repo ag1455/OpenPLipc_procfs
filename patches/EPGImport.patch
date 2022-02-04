@@ -1,0 +1,122 @@
+diff -ruN a/src/EPGImport/EPGConfig.py b/src/EPGImport/EPGConfig.py
+--- o/src/EPGImport/EPGConfig.py	2021-05-02 15:16:54.000000000 +0300
++++ pc/src/EPGImport/EPGConfig.py	2021-05-06 14:22:32.746207137 +0300
+@@ -14,7 +14,7 @@
+ from . import log
+ 
+ # User selection stored here, so it goes into a user settings backup
+-SETTINGS_FILE = '/etc/enigma2/epgimport.conf'
++SETTINGS_FILE = '/usr/local/e2/etc/enigma2/epgimport.conf'
+ 
+ channelCache = {}
+ global filterCustomChannel
+@@ -49,7 +49,7 @@
+ def set_channel_id_filter():
+ 	full_filter = ""
+ 	try:
+-		with open('/etc/epgimport/channel_id_filter.conf', 'r') as channel_id_file:
++		with open('/usr/local/e2/etc/epgimport/channel_id_filter.conf', 'r') as channel_id_file:
+ 			for channel_id_line in channel_id_file:
+ 				# Skipping comments in channel_id_filter.conf
+ 				if not channel_id_line.startswith("#"):
+@@ -157,7 +157,7 @@
+ 			pass
+ 
+ 	def update(self, filterCallback, downloadedFile=None):
+-		customFile = '/etc/epgimport/custom.channels.xml'
++		customFile = '/usr/local/e2/etc/epgimport/custom.channels.xml'
+ 		# Always read custom file since we don't know when it was last updated
+ 		# and we don't have multiple download from server problem since it is always a local file.
+ 		if os.path.exists(customFile):
+diff -ruN o/src/EPGImport/epgdat_importer.py pc/src/EPGImport/epgdat_importer.py
+--- o/src/EPGImport/epgdat_importer.py	2021-05-02 15:16:54.000000000 +0300
++++ pc/src/EPGImport/epgdat_importer.py	2021-05-06 14:23:45.799196196 +0300
+@@ -11,7 +11,7 @@
+ 	settingspath = '.'
+ else:
+ 	tmppath = '/tmp'
+-	settingspath = '/etc/enigma2'
++	settingspath = '/usr/local/e2/etc/enigma2'
+ 
+ 
+ class epgdatclass:
+diff -ruN o/src/EPGImport/epgdat.py pc/src/EPGImport/epgdat.py
+--- o/src/EPGImport/epgdat.py	2021-05-02 15:16:54.000000000 +0300
++++ pc/src/EPGImport/epgdat.py	2021-05-06 14:24:00.775401933 +0300
+@@ -115,7 +115,7 @@
+ class epgdat_class:
+ 	# temp files used for EPG.DAT creation
+ 
+-	LAMEDB = '/etc/enigma2/lamedb'
++	LAMEDB = '/usr/local/e2/etc/enigma2/lamedb'
+ 
+ 	EPGDAT_FILENAME = 'epgtest.dat'
+ 	EPGDAT_TMP_FILENAME = 'epgdat.tmp'
+diff -ruN o/src/EPGImport/EPGImport.py pc/src/EPGImport/EPGImport.py
+--- o/src/EPGImport/EPGImport.py	2021-05-02 15:16:54.000000000 +0300
++++ pc/src/EPGImport/EPGImport.py	2021-05-06 14:18:22.799740284 +0300
+@@ -27,7 +27,7 @@
+ 
+ from . import log
+ 
+-HDD_EPG_DAT = "/hdd/epg.dat"
++HDD_EPG_DAT = "/media/hdd/epg.dat"
+ 
+ 
+ class SNIFactory(ssl.ClientContextFactory):
+diff -ruN o/src/EPGImport/filtersServices.py pc/src/EPGImport/filtersServices.py
+--- o/src/EPGImport/filtersServices.py	2021-05-02 15:16:54.000000000 +0300
++++ pc/src/EPGImport/filtersServices.py	2021-05-06 14:18:22.799740284 +0300
+@@ -67,8 +67,8 @@
+ 
+ 	def saveTo(self, filename):
+ 		try:
+-			if not os.path.isdir('/etc/epgimport'):
+-				os.system('mkdir /etc/epgimport')
++			if not os.path.isdir('/usr/local/e2/etc/epgimport'):
++				os.system('mkdir /usr/local/e2/etc/epgimport')
+ 			cfg = open(filename, 'w')
+ 		except:
+ 			return
+@@ -77,7 +77,7 @@
+ 		cfg.close()
+ 
+ 	def load(self):
+-		self.loadFrom('/etc/epgimport/ignore.conf')
++		self.loadFrom('/usr/local/e2/etc/epgimport/ignore.conf')
+ 
+ 	def reload(self):
+ 		self.services = []
+@@ -87,7 +87,7 @@
+ 		return self.services
+ 
+ 	def save(self):
+-		self.saveTo('/etc/epgimport/ignore.conf')
++		self.saveTo('/usr/local/e2/etc/epgimport/ignore.conf')
+ 
+ 	def addService(self, ref):
+ 		if isinstance(ref, str):
+diff -ruN o/src/EPGImport/locale/ru.po pc/src/EPGImport/locale/ru.po
+--- o/src/EPGImport/locale/ru.po	2021-05-02 15:16:54.000000000 +0300
++++ pc/src/EPGImport/locale/ru.po	2021-05-06 14:18:22.799740284 +0300
+@@ -223,7 +223,7 @@
+ 
+ #: ../plugin.py:318
+ msgid "Manual"
+-msgstr "В ручную"
++msgstr "Вручную"
+ 
+ #: ../plugin.py:89
+ msgid "Monday"
+diff -ruN o/src/EPGImport/plugin.py pc/src/EPGImport/plugin.py
+--- o/src/EPGImport/plugin.py	2021-05-02 15:16:54.000000000 +0300
++++ pc/src/EPGImport/plugin.py	2021-05-06 14:18:22.799740284 +0300
+@@ -94,7 +94,7 @@
+ 	]
+ 
+ # historically located (not a problem, we want to update it)
+-CONFIG_PATH = '/etc/epgimport'
++CONFIG_PATH = '/usr/local/e2/etc/epgimport'
+ 
+ # Global variable
+ autoStartTimer = None

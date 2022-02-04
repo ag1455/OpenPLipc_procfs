@@ -1,0 +1,270 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Enigma 2 EPGSearch Plugin\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-07-10 15:41+0200\n"
+"PO-Revision-Date: 2020-10-01 18:24+0300\n"
+"Last-Translator: mosad - مساعد الجعيد <abo-mishal@hotmail.com>\n"
+"Language-Team: mosad - مساعد الجعيد\n"
+"Language: ar\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=6; plural=(n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5);\n"
+"X-Poedit-Basepath: .\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Generator: Poedit 2.4.1\n"
+"X-Poedit-SearchPath-0: ../src\n"
+
+#, python-format
+msgid " (%d min)"
+msgstr ""
+
+#, python-format
+msgid " (%s%d min)"
+msgstr ""
+
+msgid "Add \"Search event in EPG\" to channel menu"
+msgstr ""
+
+msgid "Add \"Search event in EPG\" to event menu"
+msgstr ""
+
+msgid "Add \"Search\" Button to EPG"
+msgstr ""
+
+#, fuzzy
+msgid "Add timer"
+msgstr "إضافة مؤقت"
+
+msgid "Adds \"Search event in EPG\" item into the channel selection context menu (needs restart GUI)"
+msgstr ""
+
+msgid "Adds \"Search event in EPG\" item into the event menu (needs restart GUI)"
+msgstr ""
+
+msgid "Cancel"
+msgstr "إلغاء"
+
+msgid "Channel Selection"
+msgstr "إختيار القناة"
+
+#, fuzzy
+msgid "Choice list"
+msgstr "عرض قائمة المؤقتات التلقائية"
+
+#, fuzzy
+msgid "Choice list EPGSearch"
+msgstr "خروج من بحث دليل البرامج الإلكترونية"
+
+msgid "Choice list RED Button"
+msgstr ""
+
+msgid "Choosing an encoding. \"UTF-8\" to search for EPG cyrillic."
+msgstr ""
+
+#, fuzzy
+msgid "Clear history"
+msgstr "بدون تاريخ"
+
+#, python-format
+msgid "Could not read AutoTimer timer list: %s"
+msgstr "لا يمكن قراءة المؤقت التلقائي من القائمة: %s"
+
+msgid "Custom search"
+msgstr ""
+
+msgid "Display name service as in bouquets"
+msgstr ""
+
+msgid "EPG Search"
+msgstr "البحدث في دليل البرامج الإلكتروني"
+
+msgid "EPGSearch"
+msgstr "البحث في دليل البرامج الإلكترونية"
+
+#, fuzzy
+msgid "EPGSearch - History"
+msgstr "ضبط البحث في دليل البرامج الإلكترونية"
+
+msgid "EPGSearch Setup"
+msgstr "ضبط البحث في دليل البرامج الإلكترونية"
+
+#, fuzzy
+msgid "Edit & search"
+msgstr "البحدث في دليل البرامج الإلكتروني"
+
+#, fuzzy
+msgid "Encoding Search to EPG"
+msgstr "البحث في دليل البرامج الإلكترونية"
+
+msgid "Enter text to search for"
+msgstr "إدخال نص للبحث عن"
+
+#, fuzzy
+msgid "Export selected as AutoTimer"
+msgstr "حفظ البحث حسب المؤقت التلقائي"
+
+#, fuzzy
+msgid "History"
+msgstr "بدون تاريخ"
+
+#, fuzzy
+msgid "How many entries to keep in the search history at most. 0 disables history entirely!"
+msgstr "الحد الأقصى لعدد الإدخالات في محفوظات البحث. اضبط هذا على 0 لتعطيل سجل البحث."
+
+msgid "If 'Search only bouquets' is enabled, show service name as in bouquets for renamed services."
+msgstr ""
+
+msgid "If this setting is enabled, searching EPG in only services in user bouquets."
+msgstr ""
+
+msgid "If this setting is enabled, the plugin adds a \"Search\" Button to the regular EPG."
+msgstr ""
+
+msgid "If this setting is enabled, the plugin adds picons."
+msgstr ""
+
+msgid "Import from AutoTimer"
+msgstr "إستيراد من المؤقت التلقائي"
+
+msgid "Import from EPG"
+msgstr "إستيراد من دليل البرامج الإلكتروني"
+
+msgid "Import from Timer"
+msgstr "إستيراد من المؤقت"
+
+#, fuzzy
+msgid "Length of History"
+msgstr "طول التاريخ"
+
+msgid "List of history is cleared !"
+msgstr ""
+
+msgid "Lookup in TMBD"
+msgstr ""
+
+msgid "Modify searched text"
+msgstr ""
+
+msgid "New Search"
+msgstr "بحث جديد"
+
+#, fuzzy
+msgid "No history !"
+msgstr "بدون تاريخ"
+
+msgid "OK"
+msgstr "موافق"
+
+msgid "Open selected in IMDb"
+msgstr "فتح الحدث المختار من قاعدة بيانات معلومات الأفلام"
+
+msgid "Partnerbox Entries"
+msgstr ""
+
+msgid "Save search as AutoTimer"
+msgstr "حفظ البحث حسب المؤقت التلقائي"
+
+msgid "Search"
+msgstr "بحث"
+
+msgid "Search EPG by title event"
+msgstr ""
+
+#, fuzzy
+msgid "Search event in EPG"
+msgstr "البحث في دليل البرامج الإلكترونية"
+
+msgid "Search for TMDb info"
+msgstr ""
+
+#, fuzzy
+msgid "Search only bouquets"
+msgstr "كل الباقات"
+
+msgid "Search strictness"
+msgstr "دقة البحث"
+
+msgid "Search type"
+msgstr "نوع البحث"
+
+#, fuzzy
+msgid "Search type for filter"
+msgstr "نوع البحث"
+
+msgid "Select a timer to search"
+msgstr "إختيار مؤقت البحث"
+
+msgid "Select action:"
+msgstr ""
+
+#, fuzzy
+msgid "Select channel"
+msgstr "إنتقل إلى القناة"
+
+msgid "Select item for search and press 'OK' or edit item with yellow button."
+msgstr ""
+
+msgid "Select text to search for"
+msgstr "تحديد نص للبحث عن"
+
+msgid "Select type for filter search. Press button P +/- for show/hide filter in description after search."
+msgstr ""
+
+msgid "Select type for search, \"partial match\" for the most extensive search, \"partial description\" for the most description search."
+msgstr ""
+
+msgid "Select type: 'Search and Select channel' or 'Search'."
+msgstr ""
+
+msgid "Select whether or not you want to enforce case correctness."
+msgstr ""
+
+msgid "Setup"
+msgstr "الضبط"
+
+#, fuzzy
+msgid "Timers list"
+msgstr "عرض قائمة المؤقتات التلقائية"
+
+msgid "Type blue Button"
+msgstr ""
+
+msgid "Use Picons"
+msgstr ""
+
+msgid "Zap to selected service"
+msgstr ""
+
+msgid "case-insensitive search"
+msgstr "البحث عن طريق الحروف الأبجدية"
+
+msgid "case-sensitive search"
+msgstr "البحث عن طريق الحروف الأبجدية"
+
+msgid "choice (Search and standard)"
+msgstr ""
+
+msgid "exact match"
+msgstr "تطابق كامل"
+
+#, fuzzy
+msgid "only Search"
+msgstr "بحث"
+
+msgid "partial description"
+msgstr ""
+
+msgid "partial match"
+msgstr "تطابق جزئي"
+
+msgid "search EPG"
+msgstr "البحث في دليل البرامج الإلكترونية"
+
+#, fuzzy
+msgid "search EPG..."
+msgstr "البحث في دليل البرامج الإلكترونية"
+
+msgid "title starts with"
+msgstr "يبدأ العنوان بـ"
