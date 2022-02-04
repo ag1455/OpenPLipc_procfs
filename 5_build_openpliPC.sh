@@ -479,7 +479,7 @@ if [ ! -f /proc/bus/nim_sockets ]; then
 	echo "    If you have own settings, then they are restored."
 	echo ""
 	echo "                    Now check please:"
-	echo "                 /etc/tuxbox/nim_sockets"
+	echo "                  /proc/bus/nim_sockets"
 	echo "      according to your /dev/dvb/adapter?/frontend?"
 	echo ""
 	echo ""
