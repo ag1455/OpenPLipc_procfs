@@ -461,7 +461,7 @@ echo "do the opposite as user, but not as root."
 echo "********************************************************"
 echo ""
 
-if [ ! -f /etc/tuxbox/nim_sockets ]; then
+if [ ! -f /proc/bus/nim_sockets ]; then
 	echo ""
 	echo "********************************************************"
 	echo "            AUTOMATIC CREATION nim_sockets."
@@ -470,8 +470,7 @@ if [ ! -f /etc/tuxbox/nim_sockets ]; then
 
 	cd util
 	./build_create_nim_sockets.sh
-	./create_nim_sockets -d
-	mv nim_sockets /etc/tuxbox
+	./create_nim_sockets -d -o /proc/bus/nim_sockets
 	cd ..
 
 	echo ""
