@@ -74,6 +74,14 @@ int e2procfs_vmode_write(struct ProcWriteInfo *proc_info, char *kbuf)
 	return 0;
 }
 
+
+int e2procfs_vchoices24_show(struct seq_file *m, void* data)
+{
+	seq_printf(m, "576i 576p 720p24 1080i24 1080p24 2160p24\n");
+
+	return 0;
+}
+
 int e2procfs_vchoices50_show(struct seq_file *m, void* data)
 {
 	seq_printf(m, "576i 576p 720p50 1080i50 1080p50 2160p50\n");
@@ -84,6 +92,29 @@ int e2procfs_vchoices50_show(struct seq_file *m, void* data)
 int e2procfs_vchoices60_show(struct seq_file *m, void* data)
 {
 	seq_printf(m, "480i 480p 720p 1080i 1080p 2160p\n");
+
+	return 0;
+}
+
+int e2procfs_vmode24_show(struct seq_file *m, void* data)
+{
+	struct ProcWriteInfo *proc_info = m->private;
+
+	if (proc_info->count > 0)
+	{
+		seq_printf(m, "%s", proc_info->bpage);
+	}
+	else
+	{
+		seq_printf(m, "\n");
+	}
+
+	return 0;
+}
+
+int e2procfs_vmode24_write(struct ProcWriteInfo *proc_info, char *kbuf)
+{
+	proc_info->bpage = kbuf;
 
 	return 0;
 }

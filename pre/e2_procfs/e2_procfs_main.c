@@ -51,62 +51,56 @@ struct ProcStructure_s e2Proc[] =
 	{cProcEntry, "stb/audio/3dsurround_softlimiter"*/
 
 	{cProcDir  , "stb/frontend"                                                     , NULL, NULL, NULL, NULL, ""},
+	{cProcDir  , "stb/frontend/1"                                                   , NULL, NULL, NULL, NULL, ""},
 	{cProcDir  , "stb/frontend/0"                                                   , NULL, NULL, NULL, NULL, ""},
 	{cProcEntry, "stb/frontend/0/mode"                                              , NULL, e2procfs_frontend_mode_show, e2procfs_frontend_mode_write, NULL, ""},
-
-	{cProcDir  , "stb/frontend/1"                                                   , NULL, NULL, NULL, NULL, ""},
-	{cProcEntry, "stb/frontend/1/mode"                                              , NULL, e2procfs_frontend_mode_show, e2procfs_frontend_mode_write, NULL, ""},
-
-	{cProcDir  , "stb/info"                                                         , NULL, NULL, NULL, NULL, ""},
-	{cProcEntry, "stb/info/brand"                                                   , NULL, e2procfs_info_brand_show, NULL, NULL, ""},
-	{cProcEntry, "stb/info/model"                                                   , NULL, e2procfs_info_model_show, NULL, NULL, ""},
-	{cProcEntry, "stb/info/boxtype"                                                 , NULL, e2procfs_info_model_show, NULL, NULL, ""},
-	{cProcEntry, "stb/info/chipset"                                                 , NULL, e2procfs_info_chipset_show, NULL, NULL, ""},
 /*	{cProcEntry, "stb/frontend/dvr_source_offset"
 	{cProcEntry, "stb/frontend/0/lnb_sense"
-	{cProcEntry, "stb/frontend/1/lnb_sense"
 	{cProcEntry, "stb/frontend/0/static_current_limiting"
-	{cProcEntry, "stb/frontend/1/static_current_limiting"
 	{cProcEntry, "stb/frontend/0/active_antenna_power"
-	{cProcEntry, "stb/frontend/1/active_antenna_power"
 	{cProcEntry, "stb/frontend/0/mode"
-	{cProcEntry, "stb/frontend/1/mode"
 	{cProcEntry, "stb/frontend/0/rf_switch"
-	{cProcEntry, "stb/frontend/1/rf_switch"
 	{cProcEntry, "stb/frontend/0/t2mi"
-	{cProcEntry, "stb/frontend/1/t2mi"
 	{cProcEntry, "stb/frontend/0/use_scpc_optimized_search_range"
-	{cProcEntry, "stb/frontend/1/use_scpc_optimized_search_range"
 	{cProcEntry, "stb/frontend/0/tone_amplitude"
-	{cProcEntry, "stb/frontend/1/tone_amplitude"
 	{cProcEntry, "stb/frontend/0/t2mirawmode"
+	{cProcEntry, "stb/frontend/0/fbc_id"*/
+	{cProcEntry, "stb/frontend/1/mode"                                              , NULL, e2procfs_frontend_mode_show, e2procfs_frontend_mode_write, NULL, ""},
+/*	{cProcEntry, "stb/frontend/1/lnb_sense"
+	{cProcEntry, "stb/frontend/1/static_current_limiting"
+	{cProcEntry, "stb/frontend/1/active_antenna_power"
+	{cProcEntry, "stb/frontend/1/mode"
+	{cProcEntry, "stb/frontend/1/rf_switch"
+	{cProcEntry, "stb/frontend/1/t2mi"
+	{cProcEntry, "stb/frontend/1/use_scpc_optimized_search_range"
+	{cProcEntry, "stb/frontend/1/tone_amplitude"
 	{cProcEntry, "stb/frontend/1/t2mirawmode"
-	{cProcEntry, "stb/frontend/0/fbc_id"
-	{cProcEntry, "stb/frontend/1/fbc_id"
-	{cProcEntry, "stb/info/vumodel"
-	{cProcEntry, "stb/info/version"
-	{cProcEntry, "stb/info/board_revision"
-	{cProcEntry, "stb/info/brandname"*/
+	{cProcEntry, "stb/frontend/1/fbc_id"*/
+
+	{cProcDir  , "stb/info"                                                         , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/info/boxtype"                                                 , NULL, e2procfs_info_model_show, NULL, NULL, ""},
+	{cProcEntry, "stb/info/chipset"                                                 , NULL, e2procfs_info_chipset_show, NULL, NULL, ""},
+	{cProcEntry, "stb/info/vumodel"                                                 , NULL, e2procfs_info_model_show, NULL, NULL, ""},
+	{cProcEntry, "stb/info/version"                                                 , NULL, e2procfs_info_chipset_show, NULL, NULL, ""},
+	{cProcEntry, "stb/info/board_revision"                                          , NULL, e2procfs_info_brand_show, NULL, NULL, ""},
+	{cProcEntry, "stb/info/brandname"                                               , NULL, e2procfs_info_brand_show, NULL, NULL, ""},
 
 	{cProcDir  , "stb/video"                                                        , NULL, NULL, NULL, NULL, ""},
 	{cProcEntry, "stb/video/alpha"                                                  , NULL, e2procfs_valpha_show, e2procfs_valpha_write, NULL, ""},
 	{cProcEntry, "stb/video/aspect"                                                 , NULL, NULL, NULL, NULL, ""},
 	{cProcEntry, "stb/video/aspect_choices"                                         , NULL, e2procfs_vachoices_show, NULL, NULL, ""},
-	{cProcEntry, "stb/video/force_dvi"                                              , NULL, NULL, NULL, NULL, ""},
 	{cProcEntry, "stb/video/policy"                                                 , NULL, e2procfs_vpolicy_show, NULL, NULL, ""},
 	{cProcEntry, "stb/video/policy_choices"                                         , NULL, e2procfs_vpchoices_show, NULL, NULL, ""},
 	{cProcEntry, "stb/video/videomode"                                              , NULL, e2procfs_vmode_show, e2procfs_vmode_write, NULL, ""},
-	{cProcEntry, "stb/video/3d_mode"                                                , NULL, NULL, NULL, NULL, ""},
+
+	{cProcEntry, "stb/video/videomode_24hz"                                         , NULL, e2procfs_vmode24_show, e2procfs_vmode24_write, NULL, ""},
 	{cProcEntry, "stb/video/videomode_50hz"                                         , NULL, e2procfs_vmode50_show, e2procfs_vmode50_write, NULL, ""},
 	{cProcEntry, "stb/video/videomode_60hz"                                         , NULL, e2procfs_vmode60_show, e2procfs_vmode60_write, NULL, ""},
-	{cProcEntry, "stb/video/videomode_choices"                                      , NULL, e2procfs_vchoices_show, NULL, NULL, ""},
+//	{cProcEntry, "stb/video/videomode_choices"                                      , NULL, e2procfs_vchoices_show, NULL, NULL, ""},
+	{cProcEntry, "stb/video/videomode_24hz_choices"                                 , NULL, e2procfs_vchoices24_show, NULL, NULL, ""},
 	{cProcEntry, "stb/video/videomode_50hz_choices"                                 , NULL, e2procfs_vchoices50_show, NULL, NULL, ""},
 	{cProcEntry, "stb/video/videomode_60hz_choices"                                 , NULL, e2procfs_vchoices60_show, NULL, NULL, ""},
 	{cProcEntry, "stb/video/videomode_preferred"                                    , NULL, e2procfs_vpreferred_show, NULL, NULL, ""},
-	{cProcEntry, "stb/video/pal_v_start"                                            , NULL, NULL, NULL, NULL, ""},
-	{cProcEntry, "stb/video/pal_v_end"                                              , NULL, NULL, NULL, NULL, ""},
-	{cProcEntry, "stb/video/pal_h_start"                                            , NULL, NULL, NULL, NULL, ""},
-	{cProcEntry, "stb/video/pal_h_end"                                              , NULL, NULL, NULL, NULL, ""},
 /*	{cProcEntry, "stb/video/alpha"
 	{cProcEntry, "stb/video/zapmode"
 	{cProcEntry, "stb/video/zapping_mode"
@@ -115,39 +109,27 @@ struct ProcStructure_s e2Proc[] =
 	{cProcEntry, "stb/video/hdmi_hdrtype"
 	{cProcEntry, "stb/video/videomode_preferred"
 	{cProcEntry, "stb/video/disable_12bit"
-	{cProcEntry, "stb/video/disable_10bit"
-	{cProcEntry, "stb/video/videomode_24hz"*/
-	{cProcEntry, "stb/video/switch_type"                                            , NULL, NULL, NULL, NULL, ""},
-	{cProcEntry, "stb/video/switch"                                                 , NULL, NULL, NULL, NULL, ""},
-	{cProcEntry, "stb/video/switch_choices"                                         , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/video/disable_10bit"*/
 
 	{cProcDir  , "stb/avs"                                                          , NULL, NULL, NULL, NULL, ""},
 	{cProcDir  , "stb/avs/0"                                                        , NULL, NULL, NULL, NULL, ""},
 	{cProcEntry, "stb/avs/0/colorformat"                                            , NULL, NULL, NULL, NULL, ""},
-	{cProcEntry, "stb/avs/0/colorformat_choices"                                    , NULL, NULL, NULL, NULL, ""},
 	{cProcEntry, "stb/avs/0/fb"                                                     , NULL, NULL, NULL, NULL, ""},
 	{cProcEntry, "stb/avs/0/input"                                                  , NULL, NULL, NULL, NULL, ""},
-	{cProcEntry, "stb/avs/0/sb"                                                     , NULL, NULL, NULL, NULL, ""},
 	{cProcEntry, "stb/avs/0/volume"                                                 , NULL, NULL, NULL, NULL, ""},
 	{cProcEntry, "stb/avs/0/input_choices"                                          , NULL, NULL, NULL, NULL, ""},
-	{cProcEntry, "stb/avs/0/standby"                                                , NULL, NULL, NULL, NULL, ""},
-	{cProcEntry, "stb/avs/0/input"                                                  , NULL, NULL, NULL, NULL, ""},
 
 	{cProcDir  , "stb/denc"                                                         , NULL, NULL, NULL, NULL, ""},
 	{cProcDir  , "stb/denc/0"                                                       , NULL, NULL, NULL, NULL, ""},
 	{cProcEntry, "stb/denc/0/wss"                                                   , NULL, e2procfs_wss_denc_show, e2procfs_wss_denc_write, NULL, ""},
-	{cProcEntry, "stb/denc/0/wss_choices"                                           , NULL, e2procfs_wssc_denc_show, NULL, NULL, ""},
-
 	{cProcDir  , "stb/fb"                                                           , NULL, NULL, NULL, NULL, ""},
 	{cProcEntry, "stb/fb/3dmode"                                                    , NULL, NULL, NULL, NULL, ""},
 	{cProcEntry, "stb/fb/znorm"                                                     , NULL, NULL, NULL, NULL, ""},
-
 	{cProcDir  , "stb/fb/primary"                                                   , NULL, NULL, NULL, NULL, ""},
-/*	{cProcEntry, "stb/fb/primary/zoffset"*/
+	{cProcEntry, "stb/fb/primary/zoffset"                                           , NULL, NULL, NULL, NULL, ""},
 
 	{cProcDir  , "stb/fp"                                                           , NULL, NULL, NULL, NULL, ""},
-	{cProcEntry, "stb/fp/lnb_sense1"                                                , NULL, NULL, NULL, NULL, ""},
-	{cProcEntry, "stb/fp/lnb_sense2"                                                , NULL, NULL, NULL, NULL, ""},
+
 	{cProcEntry, "stb/fp/led0_pattern"                                              , NULL, NULL, NULL, NULL, ""},
 	{cProcEntry, "stb/fp/led_pattern_speed"                                         , NULL, NULL, NULL, NULL, ""},
 	{cProcEntry, "stb/fp/version"                                                   , NULL, e2procfs_fpver_show, NULL, NULL, ""},
@@ -184,19 +166,13 @@ struct ProcStructure_s e2Proc[] =
 	{cProcEntry, "stb/fb/sd_detach"*/
 
 	{cProcDir  , "stb/tsmux"                                                        , NULL, NULL, NULL, NULL, ""},
+	{cProcDir  , "stb/tsmux/input"                                                  , NULL, NULL, NULL, NULL, ""},
 	{cProcEntry, "stb/tsmux/input0"                                                 , NULL, NULL, NULL, NULL, ""},
 	{cProcEntry, "stb/tsmux/input1"                                                 , NULL, NULL, NULL, NULL, ""},
 	{cProcEntry, "stb/tsmux/ci0_input"                                              , NULL, NULL, NULL, NULL, ""},
-	{cProcEntry, "stb/tsmux/ci1_input"                                              , NULL, NULL, NULL, NULL, ""},
-	{cProcEntry, "stb/tsmux/lnb_b_input"                                            , NULL, NULL, NULL, NULL, ""},
-/*	{cProcDir  , "stb/tsmux/input"
-	{cProcDir  , "stb/tsmux/ci_tsclk"
-	{cProcDir  , "stb/tsmux/ci0_tsclk"
-	{cProcDir  , "stb/tsmux/ci1_tsclk"
-	{cProcDir  , "stb/tsmux/ci0_input_choices"
-	{cProcDir  , "stb/tsmux/input0d"
-	{cProcDir  , "stb/tsmux/input1d"
-	{cProcDir  , "stb/tsmux/rmx_delay"*/
+	{cProcDir  , "stb/tsmux/ci0_input_choices"                                      , NULL, NULL, NULL, NULL, ""},
+
+/*	{cProcDir  , "stb/tsmux/rmx_delay"*/
 
 	{cProcDir  , "stb/misc"                                                         , NULL, NULL, NULL, NULL, ""},
 	{cProcEntry, "stb/misc/12V_output"                                              , NULL, NULL, NULL, NULL, ""},
@@ -207,109 +183,43 @@ struct ProcStructure_s e2Proc[] =
 	{cProcEntry, "stb/vmpeg/0/dst_top"                                              , NULL, NULL, NULL, NULL, ""},
 	{cProcEntry, "stb/vmpeg/0/dst_width"                                            , NULL, NULL, NULL, NULL, ""},
 	{cProcEntry, "stb/vmpeg/0/dst_height"                                           , NULL, NULL, e2procfs_vmpeg_dstheight_write, NULL, ""},
-	{cProcEntry, "stb/vmpeg/0/dst_all"                                              , NULL, NULL, NULL, NULL, ""},
-	{cProcEntry, "stb/vmpeg/0/yres"                                                 , NULL, NULL, NULL, NULL, ""},
-	{cProcEntry, "stb/vmpeg/0/xres"                                                 , NULL, NULL, NULL, NULL, ""},
 	{cProcEntry, "stb/vmpeg/0/aspect"                                               , NULL, NULL, NULL, NULL, ""},
 	{cProcEntry, "stb/vmpeg/0/framerate"                                            , NULL, NULL, NULL, NULL, ""},
-/*	{cProcEntry, "stb/vmpeg/0/smooth"
-	{cProcEntry, "stb/vmpeg/0/pep_scaler_sharpness"
-	{cProcEntry, "stb/vmpeg/0/pep_apply"
-	{cProcEntry, "stb/vmpeg/0/dst_height"
-	{cProcEntry, "stb/vmpeg/0/dst_top"
-	{cProcEntry, "stb/vmpeg/0/dst_left"
-	{cProcEntry, "stb/vmpeg/0/progressive"
-	{cProcEntry, "stb/vmpeg/0/gamma"
-	{cProcEntry, "stb/vmpeg/0/dst_"
-	{cProcEntry, "stb/vmpeg/0/pep_contrast"
-	{cProcEntry, "stb/vmpeg/0/pep_saturation"
-	{cProcEntry, "stb/vmpeg/0/pep_hue"
-	{cProcEntry, "stb/vmpeg/0/pep_brightness"
-	{cProcEntry, "stb/vmpeg/0/pep_block_noise_reduction"
-	{cProcEntry, "stb/vmpeg/0/pep_mosquito_noise_reduction"
-	{cProcEntry, "stb/vmpeg/0/pep_digital_contour_removal"
-	{cProcEntry, "stb/vmpeg/0/pep_split"
-	{cProcEntry, "stb/vmpeg/0/pep_sharpness"
-	{cProcEntry, "stb/vmpeg/0/pep_auto_flesh"
-	{cProcEntry, "stb/vmpeg/0/pep_green_boost"
-	{cProcEntry, "stb/vmpeg/0/pep_blue_boost"
-	{cProcEntry, "stb/vmpeg/0/pep_dynamic_contrast"
-	{cProcEntry, "stb/vmpeg/0/pep_scaler_sharpness"
-	{cProcEntry, "stb/vmpeg/0/pep_scaler_vertical_dejagging"*/
+	{cProcEntry, "stb/vmpeg/0/progressive"                                          , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/vmpeg/0/pep_scaler_sharpness"                                 , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/vmpeg/0/pep_apply"                                            , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/vmpeg/0/pep_contrast"                                         , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/vmpeg/0/pep_saturation"                                       , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/vmpeg/0/pep_hue"                                              , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/vmpeg/0/pep_brightness"                                       , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/vmpeg/0/pep_block_noise_reduction"                            , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/vmpeg/0/pep_mosquito_noise_reduction"                         , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/vmpeg/0/pep_digital_contour_removal"                          , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/vmpeg/0/pep_split"                                            , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/vmpeg/0/pep_sharpness"                                        , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/vmpeg/0/pep_auto_flesh"                                       , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/vmpeg/0/pep_green_boost"                                      , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/vmpeg/0/pep_blue_boost"                                       , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/vmpeg/0/pep_dynamic_contrast"                                 , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/vmpeg/0/pep_scaler_vertical_dejagging"                        , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/vmpeg/0/gamma"                                                , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/vmpeg/0/dst_"                                                 , NULL, NULL, NULL, NULL, ""},
 
 	{cProcDir  , "stb/vmpeg/1"                                                      , NULL, NULL, NULL, NULL, ""},
-	{cProcEntry, "stb/vmpeg/1/dst_left"                                             , NULL, NULL, NULL, NULL, ""},
-	{cProcEntry, "stb/vmpeg/1/dst_top"                                              , NULL, NULL, NULL, NULL, ""},
-	{cProcEntry, "stb/vmpeg/1/dst_width"                                            , NULL, NULL, NULL, NULL, ""},
-	{cProcEntry, "stb/vmpeg/1/dst_height"                                           , NULL, NULL, NULL, NULL, ""},
-	{cProcEntry, "stb/vmpeg/1/dst_all"                                              , NULL, NULL, NULL, NULL, ""},
-	{cProcEntry, "stb/vmpeg/1/yres"                                                 , NULL, NULL, NULL, NULL, ""},
-	{cProcEntry, "stb/vmpeg/1/xres"                                                 , NULL, NULL, NULL, NULL, ""},
-	{cProcEntry, "stb/vmpeg/1/aspect"                                               , NULL, NULL, NULL, NULL, ""},
-	{cProcEntry, "stb/vmpeg/1/framerate"                                            , NULL, NULL, NULL, NULL, ""},
-/*	{cProcEntry, "stb/vmpeg/1/progressive"
-	{cProcEntry, "stb/vmpeg/1/gamma"
-	{cProcEntry, "stb/vmpeg/1/dst_"
-	{cProcEntry, "stb/vmpeg/1/external"
-	{cProcEntry, "stb/vmpeg/1/visible"*/
+	{cProcEntry, "stb/vmpeg/1/external"                                             , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/vmpeg/1/visible"                                              , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/vmpeg/0/gamma"                                                , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/vmpeg/1/gamma"                                                , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/vmpeg/0/dst_"                                                 , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/vmpeg/1/dst_"                                                 , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/vmpeg/1/external"                                             , NULL, NULL, NULL, NULL, ""},
 
 	{cProcDir  , "stb/hdmi"                                                         , NULL, NULL, NULL, NULL, ""},
 	{cProcEntry, "stb/hdmi/bypass_edid_checking"                                    , NULL, NULL, NULL, NULL, ""},
-	{cProcEntry, "stb/hdmi/enable_hdmi_resets"                                      , NULL, NULL, NULL, NULL, ""},
-	{cProcEntry, "stb/hdmi/output"                                                  , NULL, NULL, NULL, NULL, ""},
-	{cProcEntry, "stb/hdmi/output_choices"                                          , NULL, NULL, NULL, NULL, ""},
 	{cProcEntry, "stb/hdmi/audio_source"                                            , NULL, NULL, NULL, NULL, ""},
-	{cProcEntry, "stb/hdmi/audio_source_choices"                                    , NULL, NULL, NULL, NULL, ""},
-	{cProcEntry, "stb/hdmi/cec"                                                     , NULL, NULL, NULL, NULL, ""},
-/*	{cProcEntry, "stb/hdmi/preemphasis"
-	{cProcEntry, "stb/hdmi_colorimetry"
-	{cProcEntry, "stb/hdmi/hlg_support_choices"
-	{cProcEntry, "stb/hdmi/hdr10_support"*/
-
-	{cProcDir,   "stb/stream"                                                       , NULL, NULL, NULL, NULL, ""},
-	{cProcDir,   "stb/stream/policy"                                                , NULL, NULL, NULL, NULL, ""},
-	{cProcEntry, "stb/stream/policy/AV_SYNC"                                        , NULL, NULL, NULL, NULL, "AV_SYNC"},
-	{cProcEntry, "stb/stream/policy/TRICK_MODE_AUDIO"                               , NULL, NULL, NULL, NULL, "TRICK_MODE_AUDIO"},
-	{cProcEntry, "stb/stream/policy/PLAY_24FPS_VIDEO_AT_25FPS"                      , NULL, NULL, NULL, NULL, "PLAY_24FPS_VIDEO_AT_25FPS"},
-	{cProcEntry, "stb/stream/policy/MASTER_CLOCK"                                   , NULL, NULL, NULL, NULL, "MASTER_CLOCK"},
-	{cProcEntry, "stb/stream/policy/EXTERNAL_TIME_MAPPING"                          , NULL, NULL, NULL, NULL, "EXTERNAL_TIME_MAPPING"},
-	{cProcEntry, "stb/stream/policy/DISPLAY_FIRST_FRAME_EARLY"                      , NULL, NULL, NULL, NULL, "DISPLAY_FIRST_FRAME_EARLY"},
-	{cProcEntry, "stb/stream/policy/STREAM_ONLY_KEY_FRAMES"                         , NULL, NULL, NULL, NULL, "STREAM_ONLY_KEY_FRAMES"},
-	{cProcEntry, "stb/stream/policy/STREAM_SINGLE_GROUP_BETWEEN_DISCONTINUITIES"    , NULL, NULL, NULL, NULL, "STREAM_SINGLE_GROUP_BETWEEN_DISCONTINUITIES"},
-	{cProcEntry, "stb/stream/policy/PLAYOUT_ON_TERMINATE"                           , NULL, NULL, NULL, NULL, "PLAYOUT_ON_TERMINATE"},
-	{cProcEntry, "stb/stream/policy/PLAYOUT_ON_SWITCH"                              , NULL, NULL, NULL, NULL, "PLAYOUT_ON_SWITCH"},
-	{cProcEntry, "stb/stream/policy/PLAYOUT_ON_DRAIN"                               , NULL, NULL, NULL, NULL, "PLAYOUT_ON_DRAIN"},
-	{cProcEntry, "stb/stream/policy/TRICK_MODE_DOMAIN"                              , NULL, NULL, NULL, NULL, "TRICK_MODE_DOMAIN"},
-	{cProcEntry, "stb/stream/policy/DISCARD_LATE_FRAMES"                            , NULL, NULL, NULL, NULL, "DISCARD_LATE_FRAMES"},
-	{cProcEntry, "stb/stream/policy/REBASE_ON_DATA_DELIVERY_LATE"                   , NULL, NULL, NULL, NULL, "REBASE_ON_DATA_DELIVERY_LATE"},
-	{cProcEntry, "stb/stream/policy/REBASE_ON_FRAME_DECODE_LATE"                    , NULL, NULL, NULL, NULL, "REBASE_ON_FRAME_DECODE_LATE"},
-	{cProcEntry, "stb/stream/policy/LOWER_CODEC_DECODE_LIMITS_ON_FRAME_DECODE_LATE" , NULL, NULL, NULL, NULL, "LOWER_CODEC_DECODE_LIMITS_ON_FRAME_DECODE_LATE"},
-	{cProcEntry, "stb/stream/policy/H264_ALLOW_NON_IDR_RESYNCHRONIZATION"           , NULL, NULL, NULL, NULL, "H264_ALLOW_NON_IDR_RESYNCHRONIZATION"},
-	{cProcEntry, "stb/stream/policy/MPEG2_IGNORE_PROGESSIVE_FRAME_FLAG"             , NULL, NULL, NULL, NULL, "MPEG2_IGNORE_PROGESSIVE_FRAME_FLAG"},
-
-	{cProcDir,   "stb/video/plane"                                                  , NULL, NULL, NULL, NULL, ""},
-	{cProcEntry, "stb/video/plane/psi_brightness"                                   , NULL, NULL, NULL, NULL, "psi_brightness"},
-	{cProcEntry, "stb/video/plane/psi_saturation"                                   , NULL, NULL, NULL, NULL, "psi_saturation"},
-	{cProcEntry, "stb/video/plane/psi_contrast"                                     , NULL, NULL, NULL, NULL, "psi_contrast"},
-	{cProcEntry, "stb/video/plane/psi_tint"                                         , NULL, NULL, NULL, NULL, "psi_tint"},
-	{cProcEntry, "stb/video/plane/psi_apply"                                        , NULL, NULL, NULL, NULL, "psi_apply"},
-
-	{cProcDir  , "stb/cec"                                                          , NULL, NULL, NULL, NULL, ""},
-	{cProcEntry, "stb/cec/state_activesource"                                       , NULL, NULL, NULL, NULL, ""},
-	{cProcEntry, "stb/cec/state_standby"                                            , NULL, NULL, NULL, NULL, ""},
-	{cProcEntry, "stb/cec/state_cecaddress"                                         , NULL, NULL, NULL, NULL, ""},
-	{cProcEntry, "stb/cec/onetouchplay"                                             , NULL, NULL, NULL, NULL, ""},
-	{cProcEntry, "stb/cec/systemstandby"                                            , NULL, NULL, NULL, NULL, ""},
-	{cProcEntry, "stb/cec/event_poll"                                               , NULL, NULL, NULL, NULL, ""},
-	{cProcEntry, "stb/cec/send"                                                     , NULL, NULL, NULL, NULL, ""},
-
-	{cProcDir  , "stb/fan"                                                          , NULL, NULL, NULL, NULL, ""},
-	{cProcEntry, "stb/fan/fan_ctrl"                                                 , NULL, NULL, NULL, NULL, ""},
-	{cProcDir  , "stb/fan"                                                          , NULL, NULL, NULL, NULL, ""},
-	{cProcEntry, "stb/fan/fan_ctrl"                                                 , NULL, NULL, NULL, NULL, ""},
-
-	{cProcDir  , "stb/player"                                                       , NULL, NULL, NULL, NULL, ""},
-	{cProcEntry, "stb/player/version"                                               , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/hdmi/preemphasis"                                             , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/hdmi/hlg_support_choices"                                     , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/hdmi/hdr10_support"                                           , NULL, NULL, NULL, NULL, ""},
 
 	{cProcDir  , "stb/encoder"                                                      , NULL, NULL, NULL, NULL, ""},
 /*	{cProcEntry, "stb/encoder/0/decoder"
@@ -350,12 +260,12 @@ struct ProcStructure_s e2Proc[] =
 	{cProcEntry, "stb/lcd/live_decoder"*/
 
 	{cProcDir  , "stb/power"                                                       , NULL, NULL, NULL, NULL, ""},
-/*	{cProcEntry, "stb/power/avs"
-	{cProcEntry, "stb/power/powerled"
-	{cProcEntry, "stb/power/standbyled"
-	{cProcEntry, "stb/power/suspendled"
-	{cProcEntry, "stb/power/vfd"
-	{cProcEntry, "stb/power/wol"*/
+	{cProcEntry, "stb/power/avs"                                                   , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/power/powerled"                                              , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/power/standbyled"                                            , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/power/suspendled"                                            , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/power/vfd"                                                   , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/power/wol"                                                   , NULL, NULL, NULL, NULL, ""},
 
 	{cProcDir  , "stb/sensors"                                                     , NULL, NULL, NULL, NULL, ""},
 	{cProcEntry, "stb/sensors"                                                     , NULL, NULL, NULL, NULL, ""},
