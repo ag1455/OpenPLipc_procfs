@@ -6788,8 +6788,8 @@ diff -ruN o/lib/python/Plugins/SystemPlugins/Videomode/plugin.py pc/lib/python/P
 +			self.list.append(getConfigListEntry(_("Sound output"), config.av.sound_output))
  
  		self["config"].list = self.list
- 		self["config"].l.setList(self.list)
-@@ -157,7 +128,6 @@
+ 
+@@ -156,7 +127,6 @@
  
  	def confirm(self, confirmed):
  		if not confirmed:
@@ -6797,7 +6797,7 @@ diff -ruN o/lib/python/Plugins/SystemPlugins/Videomode/plugin.py pc/lib/python/P
  			config.av.videomode[self.last_good[0]].value = self.last_good[1]
  			config.av.videorate[self.last_good[1]].value = self.last_good[2]
  			self.hw.setMode(*self.last_good)
-@@ -165,17 +135,15 @@
+@@ -164,17 +134,15 @@
  			self.keySave()
  
  	def grabLastGoodMode(self):
@@ -6822,7 +6822,7 @@ diff -ruN o/lib/python/Plugins/SystemPlugins/Videomode/plugin.py pc/lib/python/P
  			from Screens.MessageBox import MessageBox
  			self.session.openWithCallback(self.confirm, MessageBox, _("Is this video mode ok?"), MessageBox.TYPE_YESNO, timeout=20, default=False)
  		else:
-@@ -207,20 +175,18 @@
+@@ -197,20 +165,18 @@
  
  	def hotplug(self, what):
  		print "hotplug detected on port '%s'" % (what)
@@ -6850,7 +6850,7 @@ diff -ruN o/lib/python/Plugins/SystemPlugins/Videomode/plugin.py pc/lib/python/P
  
  
  hotplug = None
-@@ -254,11 +220,10 @@
+@@ -244,11 +210,10 @@
  
  
  def startSetup(menuid):
