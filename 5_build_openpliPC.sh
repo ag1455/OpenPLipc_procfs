@@ -264,7 +264,7 @@ if [ ! -f /lib/modules/`uname -r`/kernel/drivers/media/dvb-frontends/dvbsoftware
 	if [ -f dvbsoftwareca.ko ]; then
 		make clean
 	fi
-	make -j"$DO_PARALLEL"
+	make -C /lib/modules/`uname -r`/build M=`pwd` -j"$DO_PARALLEL"
 	if [ ! $? -eq 0 ]; then
 		echo ""
 		echo "******************************************************************"
