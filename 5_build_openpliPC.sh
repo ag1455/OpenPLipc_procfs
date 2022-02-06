@@ -382,7 +382,6 @@ cp -fv scripts/* $INSTALL_E2DIR/bin
 cp -fv enigma2/lib/gdi/*.h $INSTALL_E2DIR/include/enigma2/lib/gdi
 cp -fv /etc/NetworkManager/NetworkManager.conf /etc/NetworkManager/NetworkManager.conf~
 cp -fv /etc/network/interfaces /etc/network/interfaces~
-cp -fv util/create_nim_sockets /usr/local/bin
 if [ -d $DVB_DEV ]; then
 	cp -fv pre/rc.local /etc
 else
@@ -471,6 +470,7 @@ if [ ! -f /proc/bus/nim_sockets ]; then
 	cd util
 	./build_create_nim_sockets.sh
 	./create_nim_sockets -d -o /proc/bus/nim_sockets
+	cp -fv create_nim_sockets /usr/local/bin
 	cd ..
 
 	echo ""
