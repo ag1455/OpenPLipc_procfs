@@ -20,11 +20,6 @@ else
 	touch "$LOG"
 fi
 
-chmod -R 644 /proc/stb
-chmod -R u=rw,g=r,o=r,a+X /proc/stb
-chmod 644 /proc/bus/nim_sockets
-create_nim_sockets -o /proc/bus/nim_sockets
-
 while [ 1 != 0 ]; do # The script will run in a loop until appears frontend0.
 	if [ $(ls $DVB_DEV0 | grep -w frontend0) ]; then
 		modprobe -v dvbsoftwareca

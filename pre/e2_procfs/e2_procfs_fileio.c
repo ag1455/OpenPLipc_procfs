@@ -70,8 +70,8 @@ int file_read(struct file* file, unsigned char* data, unsigned int size)
 #ifdef set_fs
 	oldfs = get_fs();
 	set_fs(KERNEL_DS);
-#else
-	ssize_t kernel_read(struct file *file, void *buf, size_t count, loff_t *pos);
+//#else
+//	ssize_t kernel_read(struct file *file, void *buf, size_t count, loff_t *pos);
 #endif
 
 	ret = kernel_read(file, data, size, &file->f_pos);
@@ -96,8 +96,8 @@ int file_write(struct file* file, unsigned char* data, unsigned int size)
 #ifdef set_fs
 	oldfs = get_fs();
 	set_fs(KERNEL_DS);
-#else
-	ssize_t kernel_write(struct file *file, const void *buf, size_t count, loff_t *pos);
+//#else
+//	ssize_t kernel_write(struct file *file, const void *buf, size_t count, loff_t *pos);
 #endif
 
 	ret = kernel_write(file, data, size, &file->f_pos);
