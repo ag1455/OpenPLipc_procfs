@@ -467,4 +467,3 @@ echo ""
 echo "      At the first start you can skip the network"
 echo "  configuration, since this is already set in Ubuntu."
 echo "********************************************************"
-fi
