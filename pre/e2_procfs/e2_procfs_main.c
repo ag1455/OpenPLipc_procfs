@@ -54,22 +54,20 @@ struct ProcStructure_s e2Proc[] =
 	{cProcDir  , "stb/frontend/1"                                                   , NULL, NULL, NULL, NULL, ""},
 	{cProcDir  , "stb/frontend/0"                                                   , NULL, NULL, NULL, NULL, ""},
 	{cProcEntry, "stb/frontend/0/mode"                                              , NULL, e2procfs_frontend_mode_show, e2procfs_frontend_mode_write, NULL, ""},
+	{cProcEntry, "stb/frontend/1/mode"                                              , NULL, e2procfs_frontend_mode_show, e2procfs_frontend_mode_write, NULL, ""},
 /*	{cProcEntry, "stb/frontend/dvr_source_offset"
 	{cProcEntry, "stb/frontend/0/lnb_sense"
 	{cProcEntry, "stb/frontend/0/static_current_limiting"
 	{cProcEntry, "stb/frontend/0/active_antenna_power"
-	{cProcEntry, "stb/frontend/0/mode"
 	{cProcEntry, "stb/frontend/0/rf_switch"
 	{cProcEntry, "stb/frontend/0/t2mi"
 	{cProcEntry, "stb/frontend/0/use_scpc_optimized_search_range"
 	{cProcEntry, "stb/frontend/0/tone_amplitude"
 	{cProcEntry, "stb/frontend/0/t2mirawmode"
-	{cProcEntry, "stb/frontend/0/fbc_id"*/
-	{cProcEntry, "stb/frontend/1/mode"                                              , NULL, e2procfs_frontend_mode_show, e2procfs_frontend_mode_write, NULL, ""},
-/*	{cProcEntry, "stb/frontend/1/lnb_sense"
+	{cProcEntry, "stb/frontend/0/fbc_id"
+	{cProcEntry, "stb/frontend/1/lnb_sense"
 	{cProcEntry, "stb/frontend/1/static_current_limiting"
 	{cProcEntry, "stb/frontend/1/active_antenna_power"
-	{cProcEntry, "stb/frontend/1/mode"
 	{cProcEntry, "stb/frontend/1/rf_switch"
 	{cProcEntry, "stb/frontend/1/t2mi"
 	{cProcEntry, "stb/frontend/1/use_scpc_optimized_search_range"
@@ -92,22 +90,19 @@ struct ProcStructure_s e2Proc[] =
 	{cProcEntry, "stb/video/policy"                                                 , NULL, e2procfs_vpolicy_show, NULL, NULL, ""},
 	{cProcEntry, "stb/video/policy_choices"                                         , NULL, e2procfs_vpchoices_show, NULL, NULL, ""},
 	{cProcEntry, "stb/video/videomode"                                              , NULL, e2procfs_vmode_show, e2procfs_vmode_write, NULL, ""},
-
 	{cProcEntry, "stb/video/videomode_24hz"                                         , NULL, e2procfs_vmode24_show, e2procfs_vmode24_write, NULL, ""},
 	{cProcEntry, "stb/video/videomode_50hz"                                         , NULL, e2procfs_vmode50_show, e2procfs_vmode50_write, NULL, ""},
 	{cProcEntry, "stb/video/videomode_60hz"                                         , NULL, e2procfs_vmode60_show, e2procfs_vmode60_write, NULL, ""},
-//	{cProcEntry, "stb/video/videomode_choices"                                      , NULL, e2procfs_vchoices_show, NULL, NULL, ""},
 	{cProcEntry, "stb/video/videomode_24hz_choices"                                 , NULL, e2procfs_vchoices24_show, NULL, NULL, ""},
 	{cProcEntry, "stb/video/videomode_50hz_choices"                                 , NULL, e2procfs_vchoices50_show, NULL, NULL, ""},
 	{cProcEntry, "stb/video/videomode_60hz_choices"                                 , NULL, e2procfs_vchoices60_show, NULL, NULL, ""},
 	{cProcEntry, "stb/video/videomode_preferred"                                    , NULL, e2procfs_vpreferred_show, NULL, NULL, ""},
-/*	{cProcEntry, "stb/video/alpha"
+/*	{cProcEntry, "stb/video/videomode_choices"                                      , NULL, e2procfs_vchoices_show, NULL, NULL, ""},
 	{cProcEntry, "stb/video/zapmode"
 	{cProcEntry, "stb/video/zapping_mode"
 	{cProcEntry, "stb/video/hdmi_colorspace"
 	{cProcEntry, "stb/video/hdmi_colordepth"
 	{cProcEntry, "stb/video/hdmi_hdrtype"
-	{cProcEntry, "stb/video/videomode_preferred"
 	{cProcEntry, "stb/video/disable_12bit"
 	{cProcEntry, "stb/video/disable_10bit"*/
 
@@ -133,11 +128,11 @@ struct ProcStructure_s e2Proc[] =
 	{cProcEntry, "stb/fp/led0_pattern"                                              , NULL, NULL, NULL, NULL, ""},
 	{cProcEntry, "stb/fp/led_pattern_speed"                                         , NULL, NULL, NULL, NULL, ""},
 	{cProcEntry, "stb/fp/version"                                                   , NULL, e2procfs_fpver_show, NULL, NULL, ""},
-	//rtc is disabled for now because it causes segmentation fault
-	//{cProcEntry, "stb/fp/wakeup_time"                                               , NULL, e2procfs_fpwut_show, e2procfs_fpwut_write, NULL, ""},
-	//{cProcEntry, "stb/fp/was_timer_wakeup"                                          , NULL, e2procfs_fpwtw_show, e2procfs_fpwtw_write, NULL, ""},
-	//{cProcEntry, "stb/fp/rtc"                                                       , NULL, e2procfs_fprtc_show, e2procfs_fprtc_write, NULL, ""},
-/*	{cProcEntry, "stb/fp/events"
+	/*rtc is disabled for now because it causes segmentation fault
+	{cProcEntry, "stb/fp/wakeup_time"                                               , NULL, e2procfs_fpwut_show, e2procfs_fpwut_write, NULL, ""},
+	{cProcEntry, "stb/fp/was_timer_wakeup"                                          , NULL, e2procfs_fpwtw_show, e2procfs_fpwtw_write, NULL, ""},
+	{cProcEntry, "stb/fp/rtc"                                                       , NULL, e2procfs_fprtc_show, e2procfs_fprtc_write, NULL, ""},
+	{cProcEntry, "stb/fp/events"
 	{cProcEntry, "stb/fp/temp_sensor_avs"
 	{cProcEntry, "stb/fp/temp_sensor"
 	{cProcEntry, "stb/fp/vcr_fns"
@@ -146,8 +141,6 @@ struct ProcStructure_s e2Proc[] =
 	{cProcEntry, "stb/fp/rtc failed"
 	{cProcEntry, "stb/fb/dst_left"
 	{cProcEntry, "stb/fb/dst_width"
-	{cProcEntry, "stb/fb/dst_height"
-	{cProcEntry, "stb/fb/dst_height"
 	{cProcEntry, "stb/fb/dst_height"
 	{cProcEntry, "stb/fb/dst_top"
 	{cProcEntry, "stb/fp/fan_vlt"
@@ -165,14 +158,14 @@ struct ProcStructure_s e2Proc[] =
 	{cProcEntry, "stb/fp/power4x7suspend"
 	{cProcEntry, "stb/fb/sd_detach"*/
 
+/*	{cProcDir  , "stb/tsmux/rmx_delay"*/
+
 	{cProcDir  , "stb/tsmux"                                                        , NULL, NULL, NULL, NULL, ""},
 	{cProcDir  , "stb/tsmux/input"                                                  , NULL, NULL, NULL, NULL, ""},
 	{cProcEntry, "stb/tsmux/input0"                                                 , NULL, NULL, NULL, NULL, ""},
 	{cProcEntry, "stb/tsmux/input1"                                                 , NULL, NULL, NULL, NULL, ""},
 	{cProcEntry, "stb/tsmux/ci0_input"                                              , NULL, NULL, NULL, NULL, ""},
 	{cProcDir  , "stb/tsmux/ci0_input_choices"                                      , NULL, NULL, NULL, NULL, ""},
-
-/*	{cProcDir  , "stb/tsmux/rmx_delay"*/
 
 	{cProcDir  , "stb/misc"                                                         , NULL, NULL, NULL, NULL, ""},
 	{cProcEntry, "stb/misc/12V_output"                                              , NULL, NULL, NULL, NULL, ""},
@@ -222,22 +215,18 @@ struct ProcStructure_s e2Proc[] =
 	{cProcEntry, "stb/hdmi/hdr10_support"                                           , NULL, NULL, NULL, NULL, ""},
 
 	{cProcDir  , "stb/encoder"                                                      , NULL, NULL, NULL, NULL, ""},
-/*	{cProcEntry, "stb/encoder/0/decoder"
-	{cProcEntry, "stb/encoder/0/bitrate"
-	{cProcEntry, "stb/encoder/0/width"
-	{cProcEntry, "stb/encoder/0/height"
-	{cProcEntry, "stb/encoder/0/display_format"
-	{cProcEntry, "stb/encoder/0/framerate"
-	{cProcEntry, "stb/encoder/0/interlaced"
-	{cProcEntry, "stb/encoder/0/aspectratio"
-	{cProcEntry, "stb/encoder/0/%s_choices"
-	{cProcEntry, "stb/encoder/0/%s"
-	{cProcEntry, "stb/encoder/0/apply"
-	{cProcEntry, "stb/encoder/0/bitrate"
-	{cProcEntry, "stb/encoder/0/width"
-	{cProcEntry, "stb/encoder/0/height"
-	{cProcEntry, "stb/encoder/0/display_format"
-	{cProcEntry, "stb/encoder/0/vcodec_choices"*/
+	{cProcEntry, "stb/encoder/0/decoder"                                            , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/encoder/0/bitrate"                                            , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/encoder/0/width"                                              , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/encoder/0/height"                                             , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/encoder/0/display_format"                                     , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/encoder/0/framerate"                                          , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/encoder/0/interlaced"                                         , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/encoder/0/aspectratio"                                        , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/encoder/0/apply"                                              , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/encoder/0/vcodec_choices"                                     , NULL, NULL, NULL, NULL, ""},
+/*	{cProcEntry, "stb/encoder/0/%s_choices"
+	{cProcEntry, "stb/encoder/0/%s"*/
 
 	{cProcDir  , "stb/lcd"                                                          , NULL, NULL, NULL, NULL, ""},
 /*	{cProcEntry, "stb/lcd/oled_brightness"

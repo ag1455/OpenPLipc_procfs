@@ -20,7 +20,8 @@ else
 	touch "$LOG"
 fi
 
-chmod -R 755 /proc/stb
+chmod -R 644 /proc/stb
+chmod -R u=rw,g=r,o=r,a+X /proc/stb
 chmod 644 /proc/bus/nim_sockets
 create_nim_sockets -o /proc/bus/nim_sockets
 
