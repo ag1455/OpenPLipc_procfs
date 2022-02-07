@@ -39,41 +39,46 @@ struct ProcStructure_s e2Proc[] =
 	{cProcEntry, "stb/audio/aac_choices"                                            , NULL, e2procfs_aacchoices_show, NULL, NULL, ""},
 	{cProcEntry, "stb/audio/avl"                                                    , NULL, e2procfs_avl_show, e2procfs_avl_write, NULL, ""},
 	{cProcEntry, "stb/audio/avl_choices"                                            , NULL, e2procfs_avlchoices_show, NULL, NULL, ""},
-	{cProcEntry, "stb/audio/3dsurround"                                             , NULL, e2procfs_3dsurround_show, e2procfs_3dsurround_write, NULL, ""},
-	{cProcEntry, "stb/audio/3dsurround_choices"                                     , NULL, e2procfs_3dsurroundchoices_show, NULL, NULL, ""},
 	{cProcEntry, "stb/audio/autovolumelevel"                                        , NULL, e2procfs_autovolumelevel_show, e2procfs_aac_write, NULL, ""},
 	{cProcEntry, "stb/audio/autovolumelevel_choices"                                , NULL, e2procfs_autovolumelevelchoices_show, NULL, NULL, ""},
-/*	{cProcEntry, "stb/audio/multichannel_pcm"
-	{cProcEntry, "stb/audio/3d_surround_choices"
-	{cProcEntry, "stb/audio/3d_surround_speaker_position_choices"
-	{cProcEntry, "stb/audio/3d_surround_speaker_position"
-	{cProcEntry, "stb/audio/3dsurround_softlimiter_choices"
-	{cProcEntry, "stb/audio/3dsurround_softlimiter"*/
+	{cProcEntry, "stb/audio/multichannel_pcm"                                       , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/audio/3dsurround"                                             , NULL, e2procfs_3dsurround_show, e2procfs_3dsurround_write, NULL, ""},
+	{cProcEntry, "stb/audio/3dsurround_choices"                                     , NULL, e2procfs_3dsurroundchoices_show, NULL, NULL, ""},
+	{cProcEntry, "stb/audio/3d_surround"                                            , NULL, e2procfs_3d_surround_show, e2procfs_3d_surround_write, NULL, ""},
+	{cProcEntry, "stb/audio/3d_surround_choices"                                    , NULL, e2procfs_3d_surroundchoices_show, NULL, NULL, ""},
+	{cProcEntry, "stb/audio/3d_surround_speaker_position"                           , NULL, e2procfs_3d_surround_speaker_position_show, NULL, NULL, ""},
+	{cProcEntry, "stb/audio/3d_surround_speaker_position_choices"                   , NULL, e2procfs_3d_surround_speaker_positionchoices_show, NULL, NULL, ""},
+	{cProcEntry, "stb/audio/3dsurround_softlimiter"                                 , NULL, e2procfs_3dsurround_softlimiter_show, NULL, NULL, ""},
+	{cProcEntry, "stb/audio/3dsurround_softlimiter_choices"                         , NULL, e2procfs_3dsurround_softlimiterchoices_show, NULL, NULL, ""},
+
 
 	{cProcDir  , "stb/frontend"                                                     , NULL, NULL, NULL, NULL, ""},
-	{cProcDir  , "stb/frontend/1"                                                   , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/frontend/dvr_source_offset"                                   , NULL, NULL, NULL, NULL, ""},
+
 	{cProcDir  , "stb/frontend/0"                                                   , NULL, NULL, NULL, NULL, ""},
 	{cProcEntry, "stb/frontend/0/mode"                                              , NULL, e2procfs_frontend_mode_show, e2procfs_frontend_mode_write, NULL, ""},
+	{cProcEntry, "stb/frontend/0/t2mi"                                              , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/frontend/0/t2mirawmode"                                       , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/frontend/0/lnb_sense"                                         , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/frontend/0/static_current_limiting"                           , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/frontend/0/active_antenna_power"                              , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/frontend/0/rf_switch"                                         , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/frontend/0/use_scpc_optimized_search_range"                   , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/frontend/0/tone_amplitude"                                    , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/frontend/0/fbc_id"                                            , NULL, NULL, NULL, NULL, ""},
+
+	{cProcDir  , "stb/frontend/1"                                                   , NULL, NULL, NULL, NULL, ""},
 	{cProcEntry, "stb/frontend/1/mode"                                              , NULL, e2procfs_frontend_mode_show, e2procfs_frontend_mode_write, NULL, ""},
-/*	{cProcEntry, "stb/frontend/dvr_source_offset"
-	{cProcEntry, "stb/frontend/0/lnb_sense"
-	{cProcEntry, "stb/frontend/0/static_current_limiting"
-	{cProcEntry, "stb/frontend/0/active_antenna_power"
-	{cProcEntry, "stb/frontend/0/rf_switch"
-	{cProcEntry, "stb/frontend/0/t2mi"
-	{cProcEntry, "stb/frontend/0/use_scpc_optimized_search_range"
-	{cProcEntry, "stb/frontend/0/tone_amplitude"
-	{cProcEntry, "stb/frontend/0/t2mirawmode"
-	{cProcEntry, "stb/frontend/0/fbc_id"
-	{cProcEntry, "stb/frontend/1/lnb_sense"
-	{cProcEntry, "stb/frontend/1/static_current_limiting"
-	{cProcEntry, "stb/frontend/1/active_antenna_power"
-	{cProcEntry, "stb/frontend/1/rf_switch"
-	{cProcEntry, "stb/frontend/1/t2mi"
-	{cProcEntry, "stb/frontend/1/use_scpc_optimized_search_range"
-	{cProcEntry, "stb/frontend/1/tone_amplitude"
-	{cProcEntry, "stb/frontend/1/t2mirawmode"
-	{cProcEntry, "stb/frontend/1/fbc_id"*/
+	{cProcEntry, "stb/frontend/1/t2mi"                                              , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/frontend/1/t2mirawmode"                                       , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/frontend/1/lnb_sense"                                         , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/frontend/1/static_current_limiting"                           , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/frontend/1/active_antenna_power"                              , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/frontend/1/rf_switch"                                         , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/frontend/1/use_scpc_optimized_search_range"                   , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/frontend/1/tone_amplitude"                                    , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/frontend/1/t2mirawmode"                                       , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/frontend/1/fbc_id"                                            , NULL, NULL, NULL, NULL, ""},
 
 	{cProcDir  , "stb/info"                                                         , NULL, NULL, NULL, NULL, ""},
 	{cProcEntry, "stb/info/boxtype"                                                 , NULL, e2procfs_info_model_show, NULL, NULL, ""},
@@ -97,14 +102,14 @@ struct ProcStructure_s e2Proc[] =
 	{cProcEntry, "stb/video/videomode_50hz_choices"                                 , NULL, e2procfs_vchoices50_show, NULL, NULL, ""},
 	{cProcEntry, "stb/video/videomode_60hz_choices"                                 , NULL, e2procfs_vchoices60_show, NULL, NULL, ""},
 	{cProcEntry, "stb/video/videomode_preferred"                                    , NULL, e2procfs_vpreferred_show, NULL, NULL, ""},
-/*	{cProcEntry, "stb/video/videomode_choices"                                      , NULL, e2procfs_vchoices_show, NULL, NULL, ""},
-	{cProcEntry, "stb/video/zapmode"
-	{cProcEntry, "stb/video/zapping_mode"
-	{cProcEntry, "stb/video/hdmi_colorspace"
-	{cProcEntry, "stb/video/hdmi_colordepth"
-	{cProcEntry, "stb/video/hdmi_hdrtype"
-	{cProcEntry, "stb/video/disable_12bit"
-	{cProcEntry, "stb/video/disable_10bit"*/
+	{cProcEntry, "stb/video/videomode_choices"                                      , NULL, e2procfs_vchoices_show, NULL, NULL, ""},
+	{cProcEntry, "stb/video/zapmode"                                                , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/video/zapping_mode"                                           , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/video/hdmi_colorspace"                                        , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/video/hdmi_colordepth"                                        , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/video/hdmi_hdrtype"                                           , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/video/disable_12bit"                                          , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/video/disable_10bit"                                          , NULL, NULL, NULL, NULL, ""},
 
 	{cProcDir  , "stb/avs"                                                          , NULL, NULL, NULL, NULL, ""},
 	{cProcDir  , "stb/avs/0"                                                        , NULL, NULL, NULL, NULL, ""},
@@ -128,37 +133,35 @@ struct ProcStructure_s e2Proc[] =
 	{cProcEntry, "stb/fp/led0_pattern"                                              , NULL, NULL, NULL, NULL, ""},
 	{cProcEntry, "stb/fp/led_pattern_speed"                                         , NULL, NULL, NULL, NULL, ""},
 	{cProcEntry, "stb/fp/version"                                                   , NULL, e2procfs_fpver_show, NULL, NULL, ""},
+	{cProcEntry, "stb/fp/events"                                                    , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/fp/temp_sensor_avs"                                           , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/fp/temp_sensor"                                               , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/fp/vcr_fns"                                                   , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/fp/vcr_fns failed"                                            , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/fp/rtc_offset"                                                , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/fp/rtc failed"                                                , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/fb/dst_left"                                                  , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/fb/dst_width"                                                 , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/fb/dst_height"                                                , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/fb/dst_top"                                                   , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/fp/fan_vlt"                                                   , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/fp/fan"                                                       , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/fp/fan_speed"                                                 , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/fp/fan_pwm"                                                   , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/fp/led_set_pattern"                                           , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/fp/led_set_speed"                                             , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/fp/version"                                                   , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/fp/ledpowercolor"                                             , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/fp/ledstandbycolor"                                           , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/fp/ledsuspendledcolor"                                        , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/fp/power4x7on"                                                , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/fp/power4x7standby"                                           , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/fp/power4x7suspend"                                           , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/fb/sd_detach"                                                 , NULL, NULL, NULL, NULL, ""},
 	/*rtc is disabled for now because it causes segmentation fault
 	{cProcEntry, "stb/fp/wakeup_time"                                               , NULL, e2procfs_fpwut_show, e2procfs_fpwut_write, NULL, ""},
 	{cProcEntry, "stb/fp/was_timer_wakeup"                                          , NULL, e2procfs_fpwtw_show, e2procfs_fpwtw_write, NULL, ""},
-	{cProcEntry, "stb/fp/rtc"                                                       , NULL, e2procfs_fprtc_show, e2procfs_fprtc_write, NULL, ""},
-	{cProcEntry, "stb/fp/events"
-	{cProcEntry, "stb/fp/temp_sensor_avs"
-	{cProcEntry, "stb/fp/temp_sensor"
-	{cProcEntry, "stb/fp/vcr_fns"
-	{cProcEntry, "stb/fp/vcr_fns failed"
-	{cProcEntry, "stb/fp/rtc_offset"
-	{cProcEntry, "stb/fp/rtc failed"
-	{cProcEntry, "stb/fb/dst_left"
-	{cProcEntry, "stb/fb/dst_width"
-	{cProcEntry, "stb/fb/dst_height"
-	{cProcEntry, "stb/fb/dst_top"
-	{cProcEntry, "stb/fp/fan_vlt"
-	{cProcEntry, "stb/fp/fan"
-	{cProcEntry, "stb/fp/fan_speed"
-	{cProcEntry, "stb/fp/fan_pwm"
-	{cProcEntry, "stb/fp/led_set_pattern"
-	{cProcEntry, "stb/fp/led_set_speed"
-	{cProcEntry, "stb/fp/version"
-	{cProcEntry, "stb/fp/ledpowercolor"
-	{cProcEntry, "stb/fp/ledstandbycolor"
-	{cProcEntry, "stb/fp/ledsuspendledcolor"
-	{cProcEntry, "stb/fp/power4x7on"
-	{cProcEntry, "stb/fp/power4x7standby"
-	{cProcEntry, "stb/fp/power4x7suspend"
-	{cProcEntry, "stb/fb/sd_detach"*/
-
-/*	{cProcDir  , "stb/tsmux/rmx_delay"*/
+	{cProcEntry, "stb/fp/rtc"                                                       , NULL, e2procfs_fprtc_show, e2procfs_fprtc_write, NULL, ""},*/
 
 	{cProcDir  , "stb/tsmux"                                                        , NULL, NULL, NULL, NULL, ""},
 	{cProcDir  , "stb/tsmux/input"                                                  , NULL, NULL, NULL, NULL, ""},
@@ -166,6 +169,7 @@ struct ProcStructure_s e2Proc[] =
 	{cProcEntry, "stb/tsmux/input1"                                                 , NULL, NULL, NULL, NULL, ""},
 	{cProcEntry, "stb/tsmux/ci0_input"                                              , NULL, NULL, NULL, NULL, ""},
 	{cProcDir  , "stb/tsmux/ci0_input_choices"                                      , NULL, NULL, NULL, NULL, ""},
+	{cProcDir  , "stb/tsmux/rmx_delay"                                              , NULL, NULL, NULL, NULL, ""},
 
 	{cProcDir  , "stb/misc"                                                         , NULL, NULL, NULL, NULL, ""},
 	{cProcEntry, "stb/misc/12V_output"                                              , NULL, NULL, NULL, NULL, ""},
@@ -229,41 +233,41 @@ struct ProcStructure_s e2Proc[] =
 	{cProcEntry, "stb/encoder/0/%s"*/
 
 	{cProcDir  , "stb/lcd"                                                          , NULL, NULL, NULL, NULL, ""},
-/*	{cProcEntry, "stb/lcd/oled_brightness"
-	{cProcEntry, "stb/lcd/oled_brightness failed"
-	{cProcEntry, "stb/lcd/xres"
-	{cProcEntry, "stb/lcd/yres"
-	{cProcEntry, "stb/lcd/bpp"
-	{cProcEntry, "stb/lcd/symbol_circle"
-	{cProcEntry, "stb/lcd/symbol_recording"
-	{cProcEntry, "stb/lcd/symbol_timeshift"
-	{cProcEntry, "stb/lcd/symbol_timeshift"
-	{cProcEntry, "stb/lcd/show_symbols"
-	{cProcEntry, "stb/lcd/symbol_hdd"
-	{cProcEntry, "stb/lcd/scroll_repeats"
-	{cProcEntry, "stb/lcd/scroll_delay"
-	{cProcEntry, "stb/lcd/initial_scroll_delay"
-	{cProcEntry, "stb/lcd/final_scroll_delay"
-	{cProcEntry, "stb/lcd/live_enable"
-	{cProcEntry, "stb/lcd/mode"
-	{cProcEntry, "stb/lcd/live_decoder"*/
+	{cProcEntry, "stb/lcd/oled_brightness"                                          , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/lcd/oled_brightness failed"                                   , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/lcd/xres"                                                     , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/lcd/yres"                                                     , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/lcd/bpp"                                                      , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/lcd/symbol_circle"                                            , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/lcd/symbol_recording"                                         , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/lcd/symbol_timeshift"                                         , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/lcd/symbol_timeshift"                                         , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/lcd/show_symbols"                                             , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/lcd/symbol_hdd"                                               , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/lcd/scroll_repeats"                                           , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/lcd/scroll_delay"                                             , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/lcd/initial_scroll_delay"                                     , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/lcd/final_scroll_delay"                                       , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/lcd/live_enable"                                              , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/lcd/mode"                                                     , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/lcd/live_decoder"                                             , NULL, NULL, NULL, NULL, ""},
 
-	{cProcDir  , "stb/power"                                                       , NULL, NULL, NULL, NULL, ""},
-	{cProcEntry, "stb/power/avs"                                                   , NULL, NULL, NULL, NULL, ""},
-	{cProcEntry, "stb/power/powerled"                                              , NULL, NULL, NULL, NULL, ""},
-	{cProcEntry, "stb/power/standbyled"                                            , NULL, NULL, NULL, NULL, ""},
-	{cProcEntry, "stb/power/suspendled"                                            , NULL, NULL, NULL, NULL, ""},
-	{cProcEntry, "stb/power/vfd"                                                   , NULL, NULL, NULL, NULL, ""},
-	{cProcEntry, "stb/power/wol"                                                   , NULL, NULL, NULL, NULL, ""},
+	{cProcDir  , "stb/power"                                                        , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/power/avs"                                                    , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/power/powerled"                                               , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/power/standbyled"                                             , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/power/suspendled"                                             , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/power/vfd"                                                    , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/power/wol"                                                    , NULL, NULL, NULL, NULL, ""},
 
-	{cProcDir  , "stb/sensors"                                                     , NULL, NULL, NULL, NULL, ""},
-	{cProcEntry, "stb/sensors"                                                     , NULL, NULL, NULL, NULL, ""},
-	{cProcEntry, "stb/sensors/0/name"                                              , NULL, NULL, NULL, NULL, ""},
-	{cProcEntry, "stb/sensors/1/name"                                              , NULL, NULL, NULL, NULL, ""},
+	{cProcDir  , "stb/sensors"                                                      , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/sensors"                                                      , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/sensors/0/name"                                               , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/sensors/1/name"                                               , NULL, NULL, NULL, NULL, ""},
 
-	{cProcDir  , "stb/ir"                                                          , NULL, NULL, NULL, NULL, ""},
-	{cProcDir  , "stb/ir/rc"                                                       , NULL, NULL, NULL, NULL, ""},
-	{cProcEntry, "stb/ir/rc/type"                                                  , NULL, NULL, NULL, NULL, ""},
+	{cProcDir  , "stb/ir"                                                           , NULL, NULL, NULL, NULL, ""},
+	{cProcDir  , "stb/ir/rc"                                                        , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/ir/rc/type"                                                   , NULL, NULL, NULL, NULL, ""},
 };
 
 struct proc_dir_entry * find_proc_dir(char * name)
