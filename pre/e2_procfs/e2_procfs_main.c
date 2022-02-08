@@ -480,7 +480,7 @@ static void __exit e2procfs_cleanup_module(void)
 	}
 }
 MODULE_AUTHOR("Open Vision developers");
-MODULE_DESCRIPTION("RaspberryPi enigma2 procfs driver");
+MODULE_DESCRIPTION("e2pc procfs driver");
 MODULE_LICENSE("GPL");
 MODULE_VERSION("1.0.0");
 module_init(e2procfs_init_module);
