@@ -76,7 +76,6 @@ struct ProcStructure_s e2Proc[] =
 	{cProcEntry, "stb/frontend/1/rf_switch"                                         , NULL, NULL, NULL, NULL, ""},
 	{cProcEntry, "stb/frontend/1/use_scpc_optimized_search_range"                   , NULL, NULL, NULL, NULL, ""},
 	{cProcEntry, "stb/frontend/1/tone_amplitude"                                    , NULL, NULL, NULL, NULL, ""},
-	{cProcEntry, "stb/frontend/1/t2mirawmode"                                       , NULL, NULL, NULL, NULL, ""},
 	{cProcEntry, "stb/frontend/1/fbc_id"                                            , NULL, NULL, NULL, NULL, ""},
 
 	{cProcDir  , "stb/info"                                                         , NULL, NULL, NULL, NULL, ""},
@@ -103,7 +102,6 @@ struct ProcStructure_s e2Proc[] =
 	{cProcEntry, "stb/video/videomode_preferred"                                    , NULL, e2procfs_vpreferred_show, NULL, NULL, ""},
 	{cProcEntry, "stb/video/videomode_choices"                                      , NULL, e2procfs_vchoices_show, NULL, NULL, ""},
 	{cProcEntry, "stb/video/zapmode"                                                , NULL, NULL, NULL, NULL, ""},
-	{cProcEntry, "stb/video/zapping_mode"                                           , NULL, NULL, NULL, NULL, ""},
 	{cProcEntry, "stb/video/hdmi_colorspace"                                        , NULL, NULL, NULL, NULL, ""},
 	{cProcEntry, "stb/video/hdmi_colordepth"                                        , NULL, NULL, NULL, NULL, ""},
 	{cProcEntry, "stb/video/hdmi_hdrtype"                                           , NULL, NULL, NULL, NULL, ""},
@@ -205,7 +203,6 @@ struct ProcStructure_s e2Proc[] =
 	{cProcEntry, "stb/vmpeg/1/visible"                                              , NULL, NULL, NULL, NULL, ""},
 	{cProcEntry, "stb/vmpeg/1/gamma"                                                , NULL, NULL, NULL, NULL, ""},
 	{cProcEntry, "stb/vmpeg/1/dst_"                                                 , NULL, NULL, NULL, NULL, ""},
-	{cProcEntry, "stb/vmpeg/1/external"                                             , NULL, NULL, NULL, NULL, ""},
 
 	{cProcDir  , "stb/hdmi"                                                         , NULL, NULL, NULL, NULL, ""},
 	{cProcEntry, "stb/hdmi/bypass_edid_checking"                                    , NULL, NULL, NULL, NULL, ""},
@@ -254,9 +251,12 @@ struct ProcStructure_s e2Proc[] =
 	{cProcEntry, "stb/power/wol"                                                    , NULL, NULL, NULL, NULL, ""},
 
 	{cProcDir  , "stb/sensors"                                                      , NULL, NULL, NULL, NULL, ""},
-	{cProcEntry, "stb/sensors"                                                      , NULL, NULL, NULL, NULL, ""},
+	{cProcDir  , "stb/sensors/0"                                                    , NULL, NULL, NULL, NULL, ""},
 	{cProcEntry, "stb/sensors/0/name"                                               , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/sensors/0/unit"                                               , NULL, NULL, NULL, NULL, ""},
+	{cProcDir  , "stb/sensors/1"                                                    , NULL, NULL, NULL, NULL, ""},
 	{cProcEntry, "stb/sensors/1/name"                                               , NULL, NULL, NULL, NULL, ""},
+	{cProcEntry, "stb/sensors/1/unit"                                               , NULL, NULL, NULL, NULL, ""},
 
 	{cProcDir  , "stb/ir"                                                           , NULL, NULL, NULL, NULL, ""},
 	{cProcDir  , "stb/ir/rc"                                                        , NULL, NULL, NULL, NULL, ""},
