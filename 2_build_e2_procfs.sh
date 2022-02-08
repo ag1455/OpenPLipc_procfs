@@ -9,3 +9,8 @@ cp -fv $M.ko /lib/modules/`uname -r`/kernel/drivers/media/common
 make clean
 cd ../..
 depmod -a
+
+# Restart module if exist
+if [ -f /lib/modules/`uname -r`/kernel/drivers/media/common/$M.ko ]; then
+	modprobe -r e2_procfs && modprobe -v e2_procfs
+fi
