@@ -259,13 +259,11 @@ int e2procfs_3dsurround_write(struct ProcWriteInfo *proc_info, char *kbuf);
 int e2procfs_3dsurroundchoices_show(struct seq_file *m, void* data);
 int e2procfs_3dsurround_softlimiter_show(struct seq_file *m, void* data);
 int e2procfs_3dsurround_softlimiterchoices_show(struct seq_file *m, void* data);
-
 int e2procfs_3d_surround_show(struct seq_file *m, void* data);
 int e2procfs_3d_surround_write(struct ProcWriteInfo *proc_info, char *kbuf);
 int e2procfs_3d_surroundchoices_show(struct seq_file *m, void* data);
 int e2procfs_3d_surround_speaker_position_show(struct seq_file *m, void* data);
 int e2procfs_3d_surround_speaker_positionchoices_show(struct seq_file *m, void* data);
-
 int e2procfs_autovolumelevel_show(struct seq_file *m, void* data);
 int e2procfs_autovolumelevel_write(struct ProcWriteInfo *proc_info, char *kbuf);
 int e2procfs_autovolumelevelchoices_show(struct seq_file *m, void* data);

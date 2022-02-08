@@ -171,22 +171,6 @@ int e2procfs_3dsurroundchoices_show(struct seq_file *m, void* data)
 	return 0;
 }
 
-int e2procfs_3d_surround_show(struct seq_file *m, void* data)
-{
-	struct ProcWriteInfo *proc_info = m->private;
-
-	if (proc_info->count > 0)
-	{
-		seq_printf(m, "%s", proc_info->bpage);
-	}
-	else
-	{
-		seq_printf(m, "\n");
-	}
-
-	return 0;
-}
-
 int e2procfs_3dsurround_softlimiter_show(struct seq_file *m, void* data)
 {
 	struct ProcWriteInfo *proc_info = m->private;
@@ -206,6 +190,22 @@ int e2procfs_3dsurround_softlimiter_show(struct seq_file *m, void* data)
 int e2procfs_3dsurround_softlimiterchoices_show(struct seq_file *m, void* data)
 {
 	seq_printf(m, "enabled disabled\n");
+
+	return 0;
+}
+
+int e2procfs_3d_surround_show(struct seq_file *m, void* data)
+{
+	struct ProcWriteInfo *proc_info = m->private;
+
+	if (proc_info->count > 0)
+	{
+		seq_printf(m, "%s", proc_info->bpage);
+	}
+	else
+	{
+		seq_printf(m, "\n");
+	}
 
 	return 0;
 }
