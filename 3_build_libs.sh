@@ -416,8 +416,6 @@ else
 	rm $VER.zip
 	mv $PKG-$VER $PKG
 	cd $PKG
-	cd ../..
-	cd libs/$PKG
 #	autoupdate
 	autoreconf -i
 	./configure --prefix=/usr --with-wma --with-wmv --with-pcm --with-dtsdownmix --with-eac3 --with-mpeg4 --with-mpeg4v2 --with-h263 --with-h264 --with-h265
