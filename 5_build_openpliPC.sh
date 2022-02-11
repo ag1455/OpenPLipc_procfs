@@ -14,6 +14,8 @@ PKG="enigma2"
 DVB_DEV="/dev/dvb/adapter0"
 HEADERS="/usr/src/linux-headers-`uname -r`/include/uapi/linux/dvb"
 INCLUDE="/usr/include/linux/dvb"
+KDIR="/lib/modules/`uname -r`/kernel/extra"
+CA="dvbsoftwareca.ko"
 
 export PYTHON_VERSION=2.7
 export PYTHON_CPPFLAGS=-I/usr/include/python2.7
@@ -259,9 +261,14 @@ if [ "$DO_MAKEINSTALL" -eq "0" ]; then
 fi
 
 # Make dvbsoftwareca module
-if [ ! -f /lib/modules/`uname -r`/kernel/drivers/media/dvb-frontends/dvbsoftwareca.ko ]; then
-	cd ../dvbsoftwareca-5x
-	if [ -f dvbsoftwareca.ko ]; then
+modprobe -r $CA
+if [ ! -f /lib/modules/`uname -r`/kernel/drivers/media/dvb-frontends/$CA ]; then
+	rm -f $CA
+fi
+if [ ! -f $KDIR/$CA ]; then
+	mkdir -p $KDIR
+	cd ../$CA-5x
+	if [ -f $CA ]; then
 		make clean
 	fi
 	make -C /lib/modules/`uname -r`/build M=`pwd` -j"$DO_PARALLEL"
@@ -273,7 +280,7 @@ if [ ! -f /lib/modules/`uname -r`/kernel/drivers/media/dvb-frontends/dvbsoftware
 		echo ""
 		exit
 	fi
-	cp -fv dvbsoftwareca.ko /lib/modules/`uname -r`/kernel/drivers/media/dvb-frontends
+	cp -fv $CA $KDIR/
 	/sbin/depmod -a
 	cd ..
 # Create symlink
@@ -288,8 +295,8 @@ if [ ! -f /lib/modules/`uname -r`/kernel/drivers/media/dvb-frontends/dvbsoftware
 		echo "Symlink dvr1 already exists"
 	fi
 # Insert module dvbsoftwareca
-	if [ $(lsmod | grep -c dvbsoftwareca) -eq 0 ]; then
-		modprobe -v dvbsoftwareca
+	if [ $(lsmod | grep -c $CA) -eq 0 ]; then
+		modprobe -v $CA
 	fi
 else
 	cd ..
@@ -326,6 +333,9 @@ if [ -d  /usr/local/etc/stb ]; then
 fi
 if [ ! -d /etc/enigma2 ]; then
 	ln -s $INSTALL_E2DIR/etc/enigma2 /etc
+fi
+if [ ! -d /etc/tuxbox ]; then
+	ln -s $INSTALL_E2DIR/etc/tuxbox /etc
 fi
 if [ ! -d /usr/local/lib/enigma2 ]; then
 	ln -s $INSTALL_E2DIR/lib/enigma2 /usr/local/lib
@@ -370,7 +380,6 @@ fi
 
 # Copy files
 cp -rfv pre/enigma2 $INSTALL_E2DIR/etc
-cp -rfv pre/stb $INSTALL_E2DIR/etc
 cp -rfv pre/tuxbox /etc
 cp -fv pre/enigmasquared.jpg $INSTALL_E2DIR/share/enigma2
 cp -fv pre/enigmasquared2.jpg $INSTALL_E2DIR/share/enigma2

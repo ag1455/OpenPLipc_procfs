@@ -203,7 +203,7 @@ echo "                    *** Build and install $PKG ***"
 echo ""
 I=`dpkg -s $LIB | grep "Status"`
 if [ -n "$I" ]; then
-	dpkg -r $PKG $PKG-dev
+	dpkg -r $PKG1 $PKG-dev
 else
 	echo "$LIB not installed"
 fi
@@ -301,6 +301,7 @@ else
 	INSTALL_E2DIR="/usr/local/e2"
 	SOURCE="tuxtxt-git"
 	PKG="libtuxtxt"
+	PKG_="tuxtxt"
 	VER="1402795d660955757d87967b8ff1e3790625f9c1"
 	echo ""
 	echo "                       *** Build and install $PKG ***"
@@ -309,20 +310,20 @@ else
 		mkdir -p $INSTALL_E2DIR/lib/enigma2
 	fi
 	if [ -d $SOURCE ]; then
-		dpkg -r $PKG tuxtxt
+		dpkg -r $PKG $PKG_
 		rm -rf $SOURCE
 	fi
 	if [ ! -d $INSTALL_LIB/lib/enigma2 ]; then
 		ln -s $INSTALL_E2DIR/lib/enigma2 $INSTALL_LIB/lib/enigma2
 	fi
-	wget https://github.com/OpenPLi/tuxtxt/archive/$VER.zip
+	wget https://github.com/OpenPLi/$PKG_/archive/$VER.zip
 	unzip $VER.zip
 	rm $VER.zip
-	mv tuxtxt-$VER $SOURCE
+	mv $PKG_-$VER $SOURCE
 	cd ..
-	cp -v patches/tuxtxt.patch libs/$SOURCE
+	cp -v patches/$PKG_.patch libs/$SOURCE
 	cd libs/$SOURCE
-	patch -p1 < tuxtxt.patch
+	patch -p1 < $PKG_.patch
 	echo ""
 	echo "                       *** patches for $PKG applied ***"
 	echo ""
