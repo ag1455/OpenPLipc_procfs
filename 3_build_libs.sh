@@ -211,7 +211,7 @@ fi
 git clone --depth 1 git://git.opendreambox.org/git/obi/$PKG.git
 cd $PKG
 #autoupdate
-dpkg-buildpackage -uc -us
+dpkg-buildpackage -b -d -uc -us
 cd ..
 mv $PKG*.* $PKG
 cd $PKG
@@ -243,7 +243,7 @@ else
 	rpl '5' '10' debian/compat
 	rpl 'Source-Version' 'binary:Version' debian/control
 #	autoupdate
-	dpkg-buildpackage -uc -us
+	dpkg-buildpackage -b -d -uc -us
 	cd ..
 	mv $PKG*.* $PKG
 	cd $PKG
