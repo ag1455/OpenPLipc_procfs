@@ -402,6 +402,7 @@ else
 	echo ""
 	LIB="libgstreamer-plugins-dvbmediasink"
 	PKG="gst-plugin-dvbmediasink"
+	PKG_="dvbmediasink"
 	VER="1d197313832d39fdaf430634f62ad95a33029db0"
 	echo ""
 	echo "                 *** Build and install $PKG ***"
@@ -417,6 +418,13 @@ else
 	rm $VER.zip
 	mv $PKG-$VER $PKG
 	cd $PKG
+	cd ../..
+	cp -v patches/$PKG_-1.0.patch libs/$PKG
+	cd libs/$PKG
+	patch -p1 < $PKG_-1.0.patch
+	echo ""
+	echo "                 *** Patch for $PKG applied ***"
+	echo ""
 #	autoupdate
 	autoreconf -i
 	./configure --prefix=/usr --with-wma --with-wmv --with-pcm --with-dtsdownmix --with-eac3 --with-mpeg4 --with-mpeg4v2 --with-h263 --with-h264 --with-h265
