@@ -14,17 +14,17 @@ LOG="/var/log/oscam/wait.log"
 #fi
 
 if [ ! -f $LOG ]; then
-	touch "$LOG"
+	touch $LOG
 else
-	rm -f "$LOG"
-	touch "$LOG"
+	rm -f $LOG
+	touch $LOG
 fi
 
 while [ 1 != 0 ]; do # The script will run in a loop until appears frontend0.
 	if [ $(ls $DVB_DEV0 | grep -w frontend0) ]; then
 		modprobe -v dvbsoftwareca
-		chmod 660 $DVB_DEV0/ca0
-		chown root:video $DVB_DEV0/ca0
+#		chmod 660 $DVB_DEV0/ca0
+#		chown root:video $DVB_DEV0/ca0
 		echo " * Started ca0" >> $LOG
 		exit 0
 	else
@@ -32,4 +32,3 @@ while [ 1 != 0 ]; do # The script will run in a loop until appears frontend0.
 		sleep 1
 	fi
 done
-
