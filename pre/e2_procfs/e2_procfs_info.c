@@ -37,7 +37,7 @@ int e2procfs_info_brand_show(struct seq_file *m, void* data)
 
 int e2procfs_info_chipset_show(struct seq_file *m, void* data)
 {
-	seq_printf(m, "OpenPLiPC\n");
+	seq_printf(m, "OpenPLi\n");
 
 	return 0;
 }
