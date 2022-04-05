@@ -6322,7 +6322,7 @@ diff -ruN o/lib/python/Components/About.py pc/lib/python/Components/About.py
 +def getlibxineVersionString():
 +	try:
 +		from glob import glob
-+		libxine = [x.split("Version: 1.2.11+") for x in open(glob("/var/lib/dpkg/status")[0], "r") if x.startswith("Version: 1.2.11+")][0]
++		libxine = [x.split("Version: 1.2.12+") for x in open(glob("/var/lib/dpkg/status")[0], "r") if x.startswith("Version: 1.2.12+")][0]
 +		return "%s" % libxine[1].split("+")[0].replace("\n", "")
  	except:
  		return _("Not Installed")
