@@ -3,7 +3,7 @@
 # Build and install xine-lib:
 LIB="libxine2"
 PKG="xine-lib-1.2-1.2.12+hg-e2pc"
-VER="e04bde6082fd"
+VER="d6e5d46a9432"
 
 I=`dpkg -s $LIB | grep "Status"`
 
