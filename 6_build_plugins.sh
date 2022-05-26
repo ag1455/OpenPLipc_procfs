@@ -378,12 +378,14 @@ if [ -d plugins ]; then
 		mv $PKG-master $PKG
 		cd $PKG
 		rpl "Foreca - прогноз погоды" "'Foreca' - Прогноз погоды" plugin/locale/ru/LC_MESSAGES/Foreca.po
-		rpl -F "\x1b" "KEY_ESC" plugin/keymap.xml
 		if [ "$release" = "20.04" ]; then
+			rpl "\x1b" "KEY_ESC" plugin/keymap.xml
 			python2 setup.py install
 		elif [ "$release" = "22.04" ]; then
+			rpl -F "\x1b" "KEY_ESC" plugin/keymap.xml
 			python2 setup.py install
 		else
+			rpl "\x1b" "KEY_ESC" plugin/keymap.xml
 			python setup.py install
 		fi
 		mv -f /usr/local/lib/python2.7/dist-packages/Extensions/$PKG_ $INSTALL_E2DIR/lib/enigma2/python/Plugins/Extensions
