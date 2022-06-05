@@ -123,9 +123,9 @@ struct ProcStructure_s e2Proc[] =
 	{cProcDir  , "stb/fb"                                                           , NULL, NULL, NULL, NULL, ""},
 	{cProcEntry, "stb/fb/3dmode"                                                    , NULL, NULL, NULL, NULL, ""},
 	{cProcEntry, "stb/fb/znorm"                                                     , NULL, NULL, NULL, NULL, ""},
-
 	{cProcDir  , "stb/fb/primary"                                                   , NULL, NULL, NULL, NULL, ""},
 	{cProcEntry, "stb/fb/primary/zoffset"                                           , NULL, NULL, NULL, NULL, ""},
+//	{cProcEntry, "stb/fb/sd_detach"                                                 , NULL, NULL, NULL, NULL, ""},
 
 	{cProcDir  , "stb/fp"                                                           , NULL, NULL, NULL, NULL, ""},
 	{cProcEntry, "stb/fp/version"                                                   , NULL, e2procfs_fpver_show, NULL, NULL, ""},
@@ -154,7 +154,6 @@ struct ProcStructure_s e2Proc[] =
 	{cProcEntry, "stb/fp/power4x7on"                                                , NULL, NULL, NULL, NULL, ""},
 	{cProcEntry, "stb/fp/power4x7standby"                                           , NULL, NULL, NULL, NULL, ""},
 	{cProcEntry, "stb/fp/power4x7suspend"                                           , NULL, NULL, NULL, NULL, ""},
-	{cProcEntry, "stb/fb/sd_detach"                                                 , NULL, NULL, NULL, NULL, ""},
 	//rtc is disabled for now because it causes segmentation fault
 	{cProcEntry, "stb/fp/wakeup_time"                                               , NULL, e2procfs_fpwut_show, e2procfs_fpwut_write, NULL, ""},
 	{cProcEntry, "stb/fp/was_timer_wakeup"                                          , NULL, e2procfs_fpwtw_show, e2procfs_fpwtw_write, NULL, ""},
