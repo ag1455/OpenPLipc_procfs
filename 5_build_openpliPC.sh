@@ -136,7 +136,7 @@ rpl "//#define XINE_TEXTDOMAIN" "#define XINE_TEXTDOMAIN" /usr/include/xine/xine
 
 git clone https://github.com/OpenPLi/$PKG.git
 cd $PKG
-git reset --hard c7e99ce2
+git reset --hard dd062538
 cd ..
 
 # Copy headers
@@ -157,10 +157,10 @@ if [ "$release" = "14.04" ]; then
 	echo "                  *** USED g++-8 ***"
 	echo "********************************************************"
 	echo ""
+	export CXX=/usr/bin/g++-8
 	cp -fv patches/xenial_trusty.patch $PKG
 	cd $PKG
 	patch -p1 < xenial_trusty.patch
-	export CXX=/usr/bin/g++-8
 elif [ "$release" = "16.04" ]; then
 	echo ""
 	echo "********************************************************"
@@ -168,10 +168,10 @@ elif [ "$release" = "16.04" ]; then
 	echo "                  *** USED g++-8 ***"
 	echo "********************************************************"
 	echo ""
+	export CXX=/usr/bin/g++-8
 	cp -fv patches/xenial_trusty.patch $PKG
 	cd $PKG
 	patch -p1 < xenial_trusty.patch
-	export CXX=/usr/bin/g++-8
 elif [ "$release" = "18.04" ]; then
 	echo ""
 	echo "********************************************************"
@@ -186,10 +186,10 @@ elif [ "$release" = "20.04" ]; then
 	echo "                  *** USED g++-9 ***"
 	echo "********************************************************"
 	echo ""
+	export CXX=/usr/bin/g++-9
 	cp -fv patches/Makefile.am.patch $PKG
 	cd $PKG
 	patch -p1 < Makefile.am.patch
-	export CXX=/usr/bin/g++-9
 elif [ "$release" = "22.04" ]; then
 	echo ""
 	echo "********************************************************"
@@ -197,6 +197,7 @@ elif [ "$release" = "22.04" ]; then
 	echo "                  *** USED g++-11 ***"
 	echo "********************************************************"
 	echo ""
+	export CXX=/usr/bin/g++-11
 	if [ ! -f /lib/libc.so.6 ]; then
 		ln -s /lib/x86_64-linux-gnu/libc.so.6 /lib
 	fi
@@ -205,13 +206,12 @@ elif [ "$release" = "22.04" ]; then
 	cd $PKG
 	patch -p1 < Makefile.am.patch
 	patch -p1 < compile_py2.patch
-	export CXX=/usr/bin/g++-11
 fi
 
 cd ..
-cp -fv patches/patch-c7e99ce2-to-PC.patch $PKG
+cp -fv patches/patch-dd062538-to-PC.patch $PKG
 cd $PKG
-patch -p1 < patch-c7e99ce2-to-PC.patch
+patch -p1 < patch-dd062538-to-PC.patch
 
 # Configure
 if [ "$DO_CONFIGURE" -eq "1" ]; then
